@@ -1,5 +1,6 @@
 # Current State
 
-Phase 2 (Content Files) is complete.
-- The `content/` directory is fully populated with `home.ts`, `about.ts`, `features.ts`, `pricing.ts`, `blog.ts`, `faq.ts`, `contact.ts`, `careers.ts`, `terms.ts`, and `privacy.ts`.
-- All text, metadata, and labels are stored in typed objects ready for component consumption.
+Phase 3 (Animated Visuals & Image Registry) is complete.
+- Implemented 8 animated, prop-driven visual components in `components/visuals/` (`AnimatedGradientMesh`, `LogoMarquee`, `AnimatedServiceIcons`, `CTAGlow`, `HowItWorksDiagram`, `AvatarStack`, `SectionDivider`, `ParticleField`).
+- Created a centralized image registry in `lib/images.ts` mapping Unsplash URLs for various site assets.
+- Configured Next.js image optimization by adding `images.unsplash.com` to `remotePatterns` in `next.config.mjs`.
