@@ -1,11 +1,11 @@
-# Next State: Phase 3 - Animated Visuals & Image Registry
+# Next State: Phase 4 - Core Layout and Navigation Shell
 
 **Goal:**
-Establish the visual asset pipeline, including static imagery and standard functional animations that reflect the "calm-clinic" aesthetic, before building the core layout shell.
+Build the global structural shell of the application, incorporating the design system tokens, global content, and newly created visual components.
 
 **Upcoming Tasks:**
-1. Setup `lib/images.ts` to manage static Unsplash image URLs securely via `next/image`.
-2. Define remote patterns in `next.config.mjs` for Unsplash.
-3. Build generic, reusable animated visual components in `components/visuals/` using Tailwind/tw-animate-css (e.g., subtle fade-ins, gentle floating elements).
-4. Ensure all visual components respect `prefers-reduced-motion` for accessibility.
-5. Do not build full page layouts yet; focus purely on the visual primitives.
+1. Implement the global `Header` component with responsive navigation (desktop links, mobile hamburger menu).
+2. Implement the global `Footer` component consuming data from `content/global.ts` (including links, contact info, and image credits).
+3. Update `app/layout.tsx` to wrap `children` in these global components.
+4. Ensure dark mode toggle functionality is integrated into the header.
+5. Verify semantic HTML structure (header, main, footer) for accessibility.

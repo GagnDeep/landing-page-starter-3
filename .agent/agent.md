@@ -11,3 +11,6 @@ Key decisions:
 
 ## Phase 2 Completion
 Phase 2 complete. All site strings and SEO metadata are now centralized in the `content/` directory, using a consistent, friendly-professional brand voice tailored to Dr. Bansal's Dental Care in SST Nagar. TypeScript interfaces were established to ensure type safety for all content moving forward.
+
+## Phase 3 Completion
+Phase 3 complete. Built the visual foundation for the "calm-clinic" brand. Created an Unsplash image registry (`lib/images.ts`) to manage static assets without local files. Developed 8 bespoke animated components in `components/visuals/` (`AnimatedGradientMesh`, `LogoMarquee`, `AnimatedToothIllustration`, `AnimatedServiceIcons`, `FloatingBlobs`, `CTAGlow`, `StepDiagram`, `AvatarStack`) that utilize our OKLCH color tokens and smooth, reduced-motion-friendly animations. Updated Next.js config for remote patterns.
