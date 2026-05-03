@@ -1,7 +1,8 @@
 # Next State
 
-Phase 2 — Content Files is ready to begin.
+Phase 3 — Animated Visuals & Image Registry is ready to begin.
 
-- Need to create the content files in `content/` based on the `.agent/layout-home.md` and `.agent/layout-pages.md` outlines.
-- All content needs to maintain consistency with the established voice/tone from the design system ("ethical, neighborhood-trusted, painless").
-- All UI text, metadata, and labels must be centralized in type-safe TypeScript objects within the `content/` directory. No hardcoded strings should exist in UI components.
+- The project is ready to define animated visuals and source image assets from Unsplash.
+- Visual components should be located in `components/visuals/`.
+- Image assets need to be configured in `next.config.mjs` (remotePatterns) and typed/managed in `lib/images.ts`.
+- Visual components must be SSR-safe, use Tailwind/SVG, and respect `prefers-reduced-motion` for accessibility.
