@@ -1,19 +1,37 @@
-import { Button } from "@/components/ui/button"
+import { Hero } from "@/components/sections/home/Hero";
+import { TrustIndicators } from "@/components/sections/home/TrustIndicators";
+import { Welcome } from "@/components/sections/home/Welcome";
+import { Services } from "@/components/sections/home/Services";
+import { Features } from "@/components/sections/home/Features";
+import { Testimonials } from "@/components/sections/home/Testimonials";
+import { DoctorProfile } from "@/components/sections/home/DoctorProfile";
+import { ClinicTour } from "@/components/sections/home/ClinicTour";
+import { TechAndOffer } from "@/components/sections/home/TechAndOffer";
+import { EmergencyAndInfo } from "@/components/sections/home/EmergencyAndInfo";
+import { FAQTeaser } from "@/components/sections/home/FAQTeaser";
+import { FinalCTA } from "@/components/sections/home/FinalCTA";
+import { homeContent } from "@/content/home";
 
-export default function Page() {
+export const metadata = {
+  title: homeContent.seo.title,
+  description: homeContent.seo.description,
+};
+
+export default function HomePage() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
-    </div>
-  )
+    <>
+      <Hero />
+      <TrustIndicators />
+      <Welcome />
+      <Services />
+      <Features />
+      <Testimonials />
+      <DoctorProfile />
+      <ClinicTour />
+      <TechAndOffer />
+      <EmergencyAndInfo />
+      <FAQTeaser />
+      <FinalCTA />
+    </>
+  );
 }
