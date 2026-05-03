@@ -34,6 +34,8 @@ export const faqContent = {
   ],
   cta: {
     title: "Still have questions?",
-    cta: "Contact Us Directly"
+    cta: "Contact Us Directly",
+    message: "If you couldn't find the answer you were looking for, please reach out to our team. We are always happy to help.",
+    searchPlaceholder: "Search for answers..."
   }
 };

@@ -21,7 +21,9 @@ export const contactContent = {
     phoneLabel: "Phone Number",
     dateLabel: "Preferred Date",
     messageLabel: "Reason for Visit / Message",
-    submitText: "Request Appointment"
+    submitText: "Request Appointment",
+    placeholders: { name: "John Doe", phone: "+91 98765 43210", email: "john@example.com", message: "Tell us about your dental concerns or requirements..." },
+    success: { title: "Request Received", message: "Thank you for reaching out. Our team will contact you shortly to confirm your appointment.", resetBtn: "Submit Another Request" }
   },
   socials: {
     title: "Connect With Us",

@@ -1,9 +1,8 @@
 # Next State
 
-**Phase:** 7/8 — Interactive Pages and Forms
-**Requirement:** Proceed to Phase 7 to implement interactive logic.
+**Phase:** 8/8 — Blog, Legal, and Final Polish
+**Requirement:** Proceed to Phase 8 to finalize secondary static routes.
 
 **Goals:**
-- Construct the Contact page featuring robust form components with proper validation (using Shadcn UI/react-hook-form).
-- Build out the Pricing page with potential interactive toggles or accordions.
-- Assure accessibility and client-side feedback mechanisms (e.g., toasts for form submission).
+- Implement the `Blog`, `Terms`, `Privacy`, and `Careers` pages based on existing content structures.
+- Perform final UI polish, ensuring hover states and spacing constraints are uniform across the app shell.

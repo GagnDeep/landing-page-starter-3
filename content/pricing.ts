@@ -23,11 +23,13 @@ export const pricingContent = {
   },
   insurance: {
     title: "Insurance Partners",
-    description: "We accept policies from major health insurance and TPA providers. Our administrative team will assist you with the documentation required for reimbursement claims."
+    description: "We accept policies from major health insurance and TPA providers. Our administrative team will assist you with the documentation required for reimbursement claims.",
+    partners: ["HDFC ERGO", "Star Health", "SBI General"]
   },
   financing: {
     title: "Flexible Financing",
-    description: "Don't let budget constraints delay essential treatment. We offer Easy EMI options through partnered financial institutions like Bajaj Finserv."
+    description: "Don't let budget constraints delay essential treatment. We offer Easy EMI options through partnered financial institutions like Bajaj Finserv.",
+    partners: ["Bajaj Finserv", "HDFC Bank EMI"]
   },
   faq: {
     title: "Billing FAQs",
