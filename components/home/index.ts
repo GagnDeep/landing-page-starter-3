@@ -1,0 +1,6 @@
+export { HeroSection } from "./hero-section"
+export { TrustMarquee } from "./trust-marquee"
+export { ValueProposition } from "./value-proposition"
+export { SpecialtiesSection } from "./specialties-section"
+export { ServicesGrid } from "./services-grid"
+export { TestimonialsAndFaq } from "./testimonials-faq"
