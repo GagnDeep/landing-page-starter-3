@@ -1,11 +1,11 @@
-# Next State: Phase 5 - Home Page Implementation
+# Next State: Phase 6 - Services, Pricing, and About Pages
 
 **Goal:**
-Assemble the Home Page by combining the content definitions from `content/home.ts`, the image registry `lib/images.ts`, and the animated visual components into a high-converting, "calm-clinic" experience.
+Build the core informational pages of the clinic, detailing the dental treatments, cost transparency, and the team's background, using the pre-established components and content strings.
 
 **Upcoming Tasks:**
-1. Implement the Home Page (`app/page.tsx`) matching the 20 structural sections outlined in `.agent/layout-home.md`.
-2. Build section-specific components in `components/sections/home/` (e.g., `Hero`, `TrustIndicators`, `ServicesGrid`, `Testimonials`).
-3. Integrate visual components like `AnimatedGradientMesh` into the Hero, `LogoMarquee` for trust indicators, and `StepDiagram` for processes.
-4. Ensure generous vertical spacing (`py-24` or `py-32`) and soft shadows/radii per the design system.
-5. Verify semantic HTML and accessibility throughout the page.
+1. Implement the `About` page (`app/about/page.tsx`), highlighting the clinic's origin, the doctor's full bio, and core values.
+2. Implement the `Features` (Services) page (`app/features/page.tsx`), building a deeper breakdown of Preventive, Restorative, Cosmetic, and Pediatric care, with anchor linking.
+3. Implement the `Pricing` page (`app/pricing/page.tsx`), focusing on clear financial information, insurance acceptance, and flexible EMIs.
+4. Maintain consistent padding, responsive grids, and the "calm-clinic" aesthetic across all new pages.
+5. Reuse existing animated visuals or shadcn UI elements (like `Accordion` or `Table`) where applicable.
