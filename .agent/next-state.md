@@ -1,11 +1,11 @@
-# Next State: Phase 2 - Content Files
+# Next State: Phase 3 - Animated Visuals & Image Registry
 
 **Goal:**
-Establish all text content, metadata, and configuration objects in a type-safe manner before building UI components.
+Establish the visual asset pipeline, including static imagery and standard functional animations that reflect the "calm-clinic" aesthetic, before building the core layout shell.
 
 **Upcoming Tasks:**
-1. Create `content/` directory.
-2. Define TypeScript interfaces for page content (e.g., `content/types.ts`).
-3. Create content files for all documented pages (e.g., `content/home.ts`, `content/about.ts`, etc.) mapping to the structural blueprints defined in Phase 1.
-4. Ensure no hardcoded strings exist; everything must be centralized in these content files.
-5. Review content for tone: must reflect clinical authority, warmth, and a welcoming community atmosphere.
+1. Setup `lib/images.ts` to manage static Unsplash image URLs securely via `next/image`.
+2. Define remote patterns in `next.config.mjs` for Unsplash.
+3. Build generic, reusable animated visual components in `components/visuals/` using Tailwind/tw-animate-css (e.g., subtle fade-ins, gentle floating elements).
+4. Ensure all visual components respect `prefers-reduced-motion` for accessibility.
+5. Do not build full page layouts yet; focus purely on the visual primitives.
