@@ -1,10 +1,10 @@
 # Next State / Handoff
 
-**Phase Transition:** Phase 1 -> Phase 2 (Content Files)
+**Phase Transition:** Phase 2 -> Phase 3 (Animated Visual Components & Image Registry)
 
-**Instructions for Phase 2:**
-1. The design system and layout blueprints have been established and are located in the `.agent/` directory (`design-system.md` and `layout-*.md`).
-2. The content team is now ready to draft copy.
-3. Content should be typed safely into centralized TypeScript objects (within the `content/` directory, to be created).
-4. No hardcoded strings should exist in UI components going forward.
-5. Content tone must adhere to the "premium-modern, hygiene-first" and "Clinic-as-Studio" aesthetic (high-end, clean, and trustworthy). Actively avoid generic medical copy clichés.
+**Instructions for Phase 3:**
+1. The content repository has been successfully established in the `content/` directory. All 10 page-level content files are ready.
+2. Phase 3 is now unblocked and ready to consume the content files.
+3. Begin creating the animated visual components and establishing the image registry, aligning with the design system defined in `.agent/design-system.md` and the layouts in `.agent/layout-*.md`.
+4. Remember that visual components (in `components/visuals/`) must be SSR-safe, use Tailwind/SVG, and respect `prefers-reduced-motion` for accessibility.
+5. Image assets must be sourced from Unsplash, configured in `next.config.mjs` via `remotePatterns`, and centrally typed and managed in `lib/images.ts`.
