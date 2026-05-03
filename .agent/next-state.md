@@ -1,6 +1,6 @@
-# Next State: Phase 3
+# Next State: Phase 4
 
-## Phase 3 — Animated Visuals & Image Registry
+## Phase 4 — Core Layout and Home Page
 
-**Goal:** Curate image assets and create functional, SSR-safe animated visual components.
-**Requirements:** Download/register Unsplash imagery. Create TSX components for visual/animations without writing the core page layouts.
+**Goal:** Implement the global layout wrapper and the full Home Page utilizing the content files and visual components.
+**Requirements:** Create `app/layout.tsx` (or update existing) with a global header/footer, and implement `app/page.tsx` integrating the sections defined in `layout-home.md`.
