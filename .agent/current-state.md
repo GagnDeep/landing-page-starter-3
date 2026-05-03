@@ -1,16 +1,9 @@
 # Current State
 
-Phase: 3/8 — Animated Visual Components & Image Registry
+Phase: 4/8 — Core Layout and Navigation Shell
 
-- Image registry created in `lib/images.ts` with Unsplash assets and photographer credits.
-- `next.config.mjs` updated to allow remote Unsplash images.
-- Created 8 animated visual components in `components/visuals/`:
-  1. `AnimatedGradientMesh`
-  2. `LogoMarquee`
-  3. `AnimatedHeroIllustration`
-  4. `AnimatedChart`
-  5. `DotMatrixGrid`
-  6. `FloatingBlobs`
-  7. `CodeWindowTyping`
-  8. `MicroIconSet`
-- Animations respect `prefers-reduced-motion` and are hydration-safe.
+- Implemented the core layout shell in `app/layout.tsx`.
+- Created responsive `SiteHeader` with a functional mobile menu and Theme toggle.
+- Created `SiteFooter` structured around treatments, clinic links, and legal links.
+- Sourced all navigation text dynamically from `content/navigation.ts`, ensuring zero hardcoded strings.
+- Visual components from Phase 3 were integrated (e.g., `MicroIconSet` for logo branding).

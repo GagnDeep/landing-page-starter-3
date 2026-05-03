@@ -1,6 +1,6 @@
 # Next State
 
-Phase: 4/8 — Core Layout and Navigation Shell
+Phase: 5/8 — Homepage and Feature Sections
 
-- Phase 3 visual foundation is complete.
-- The project is ready for Phase 4: building the core layout shell, including the responsive header, navigation menu, and footer using the visual assets and content from earlier phases.
+- Phase 4 layout shell is complete.
+- The project is ready for Phase 5: building the landing page content. This includes assembling the Hero section, Trust Indicators, Service Grid, Testimonials, and final CTA using the components and registries prepared in previous phases.

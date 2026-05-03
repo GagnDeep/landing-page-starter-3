@@ -3,6 +3,8 @@ import { DM_Sans, Cormorant_Garamond, Geist_Mono } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
+import { SiteHeader } from "@/components/layout/site-header"
+import { SiteFooter } from "@/components/layout/site-footer"
 
 // Clean, humanist, accessible sans-serif for body
 const dmSans = DM_Sans({
@@ -41,8 +43,12 @@ export default function RootLayout({
         cormorant.variable
       )}
     >
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
+      <body className="flex min-h-screen flex-col bg-background text-foreground">
+        <ThemeProvider>
+          <SiteHeader />
+          <main className="flex-1">{children}</main>
+          <SiteFooter />
+        </ThemeProvider>
       </body>
     </html>
   )
