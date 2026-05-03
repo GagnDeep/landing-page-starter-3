@@ -2,14 +2,14 @@
 
 ## Project Baseline
 - **Project:** Amil’s Hair Lounge (Premium Unisex Salon & Academy)
-- **Phase:** 1/8 (Design System & Layout Documentation) - **COMPLETED**
-- **Status:** Documentation established. Global CSS and font configuration applied. No functional UI components or content implemented yet.
+- **Phase:** 2/8 (Content Files) - **COMPLETED**
+- **Status:** Documentation established (Phase 1). Centralized content repository (Phase 2) is complete and ready for component consumption. No functional UI components implemented yet.
 
 ## Completed Items
-- Created `.agent/design-system.md` detailing typography (Cormorant Garamond, DM Sans), color tokens (OKLCH), spacing, and motion.
-- Created layout documentation files: `.agent/layout-home.md`, `.agent/layout-about.md`, `.agent/layout-features.md`, `.agent/layout-pricing.md`, `.agent/layout-blog.md`, `.agent/layout-faq.md`, `.agent/layout-contact.md`, `.agent/layout-careers.md`, `.agent/layout-terms.md`, `.agent/layout-privacy.md`.
-- Updated `app/globals.css` with the design system CSS variables.
-- Updated `app/layout.tsx` to load brand fonts.
+- Phase 1: Design system, layout documentation, CSS global variables.
+- Phase 2: Created `content/` directory with 10 type-safe TypeScript files (`home.ts`, `about.ts`, `features.ts`, `pricing.ts`, `blog.ts`, `faq.ts`, `contact.ts`, `careers.ts`, `terms.ts`, `privacy.ts`).
+- Ensure all copy captures the "affordable luxury" tone.
+- Fixed minor rendering bugs in `use-mobile.ts` and `carousel.tsx`.
 
 ## Known Issues/Constraints
-- None currently. Phase 1 focused purely on documentation and global CSS setup.
+- None currently. Content is ready for implementation.

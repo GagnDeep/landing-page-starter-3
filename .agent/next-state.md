@@ -1,17 +1,15 @@
 # Next State
 
-## Handover for Phase 2: Content Files
+## Handover for Phase 3: Animated Visuals & Image Registry
 
 ### Objective
-Populate centralized content files (in `content/` or similar directory) based on the structural requirements laid out in the Phase 1 layout documentation.
+Establish the image registry and implement the core animated visual components that will drive the high-end boutique aesthetic before building out the full page layouts.
 
 ### Requirements
-- Create centralized, type-safe TypeScript/JSON objects for all text content (Home, About, Services, Pricing, etc.).
-- Ensure no hardcoded strings remain for future UI component implementation.
-- Content must align with the "premium, trendy, affordable luxury" and "expert-led" brand voice.
-- Review `.agent/layout-*.md` to ensure content files capture all necessary text blocks for each section defined.
+- Create an image registry (e.g., `lib/images.ts`) mapping out necessary assets with placeholders or Unsplash URLs.
+- Implement SSR-safe animated visual components in `components/visuals/`.
+- Ensure components respect `prefers-reduced-motion` and align with the motion principles in `.agent/design-system.md`.
 
 ### Constraints
-- Do not build UI components.
-- Do not implement page layouts.
-- Focus exclusively on data structures and content population.
+- Do not build full page layouts yet.
+- Focus exclusively on reusable visual elements and asset management.
