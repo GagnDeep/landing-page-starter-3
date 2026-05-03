@@ -15,3 +15,5 @@
 - Never use generic AI aesthetics (cyan-on-dark, neon accents).
 - Strictly adhere to the OKLCH color variables and modular spacing scales defined in `.agent/design-system.md`.
 - Read layout intents carefully before generating any future UI components to ensure the narrative flow makes sense for a patient-centric journey.
+
+- Phase 2 complete. Content files created for all pages. Tone and brand voice aligned with design system.

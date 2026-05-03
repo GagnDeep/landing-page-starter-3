@@ -1,14 +1,13 @@
 # Next State
 
 ## Target Phase
-**Phase 2:** Content Files
+**Phase 3:** Animated Visuals & Image Registry
 
 ## Objectives for Next Phase
-- Create type-safe TypeScript content files within a dedicated `content/` directory.
-- Centralize all UI text, metadata, labels, and SEO strings for the 10 core pages based on the layout blueprints established in Phase 1.
-- Ensure that the content accurately reflects the "friendly, clear-aligner-specialist" brand identity, capturing Dr. Sumeet Gupta’s authority and the clinic's premium aesthetic.
-- Setup the foundation so no hardcoded strings exist in future UI components.
+- Create the animated visual components specified in the blueprints and content files.
+- Establish an image registry (`lib/images.ts`) to centrally manage all photographic assets and illustrations used across the site.
+- Ensure visuals respect `prefers-reduced-motion` and align with the "calming, modern medical" aesthetic defined in the design system.
 
 ## Handoff Notes
-- The content creators should refer to `.agent/layout-[page].md` documents to understand the expected context and length of the text needed for each section.
-- Content tone should balance inviting, premium clinic luxury with rigorous, expert-led dental care.
+- All text content is now available in the `content/` directory. Use these files to drive the development of animated visual components where text overlay is required.
+- Follow the motion principles outlined in `.agent/design-system.md` (e.g., purposeful, calming, exponential easing).
