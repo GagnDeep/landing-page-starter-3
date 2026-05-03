@@ -1,6 +1,6 @@
 # Next State
 
-Phase: 3/8 — Animated Visuals & Image Registry
+Phase: 4/8 — Core Layout and Navigation Shell
 
-- Phase 2 content mapping is complete.
-- The project is now unblocked and ready for Phase 3: integrating image assets, animated visuals, and setting up the centralized image registry.
+- Phase 3 visual foundation is complete.
+- The project is ready for Phase 4: building the core layout shell, including the responsive header, navigation menu, and footer using the visual assets and content from earlier phases.

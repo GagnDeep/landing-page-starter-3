@@ -1,7 +1,16 @@
 # Current State
 
-Phase: 2/8 — Content Files
+Phase: 3/8 — Animated Visual Components & Image Registry
 
-- Established the content architecture and centralized all site text into type-safe TS files within the `content/` directory.
-- All 10 pages (Home, About, Features, Pricing, Blog, FAQ, Contact, Careers, Terms, Privacy) have structured content.
-- Copy aligns with the "modern, gentle-pediatric" brand voice, highlighting Dr. Vikramjit (RCT) and Dr. Arshiya (Pediatric).
+- Image registry created in `lib/images.ts` with Unsplash assets and photographer credits.
+- `next.config.mjs` updated to allow remote Unsplash images.
+- Created 8 animated visual components in `components/visuals/`:
+  1. `AnimatedGradientMesh`
+  2. `LogoMarquee`
+  3. `AnimatedHeroIllustration`
+  4. `AnimatedChart`
+  5. `DotMatrixGrid`
+  6. `FloatingBlobs`
+  7. `CodeWindowTyping`
+  8. `MicroIconSet`
+- Animations respect `prefers-reduced-motion` and are hydration-safe.
