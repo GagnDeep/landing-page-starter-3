@@ -12,6 +12,10 @@ export const homeContent = {
   trustBar: {
     title: "Recognized for Excellence in Dental Care",
     logos: [
+      { text: "ADA Certified" },
+      { text: "ISO 9001:2015" },
+      { text: "Top Rated Patiala" },
+      { text: "Indian Dental Association" },
       { alt: "Indian Dental Association", src: "/logos/ida.svg" },
       { alt: "ISO Certified", src: "/logos/iso.svg" },
       { alt: "Top Rated Patiala", src: "/logos/top-rated.svg" }
@@ -94,7 +98,8 @@ export const homeContent = {
   ],
   insurance: {
     title: "Accessible Premium Care",
-    description: "We partner with major health insurance providers and offer flexible EMI options to ensure top-tier dental care is within your reach."
+    description: "We partner with major health insurance providers and offer flexible EMI options to ensure top-tier dental care is within your reach.",
+    partners: ["HDFC ERGO", "Star Health", "Bajaj Finserv EMI", "SBI General"]
   },
   journey: {
     title: "Your Journey to a Perfect Smile",
@@ -116,6 +121,11 @@ export const homeContent = {
     cta: "Start Assessment"
   },
   blogTeaser: {
+    posts: [
+      { title: "Understanding Dental Implants", date: "Oct 12, 2023", imgKey: "placeholder1" },
+      { title: "The Truth About Teeth Whitening", date: "Sep 28, 2023", imgKey: "placeholder2" },
+      { title: "How to Prevent Gum Disease", date: "Sep 15, 2023", imgKey: "placeholder1" }
+    ],
     title: "Insights & Patient Education",
     cta: "Read All Articles"
   },
@@ -131,6 +141,13 @@ export const homeContent = {
     title: "Visit Our Clinic",
     address: "Leela Bhawan, Patiala, Punjab",
     hours: "Mon - Sat: 9:30 AM - 7:30 PM",
+    phone: "+91 98765 43210",
+    labels: {
+      address: "Address",
+      hours: "Clinic Hours",
+      contact: "Contact",
+      mapPlaceholder: "Interactive Map Integration"
+    },
     cta: "Get Directions"
   },
   globalCta: {

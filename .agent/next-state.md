@@ -1,9 +1,9 @@
 # Next State
 
-**Phase:** 5/8 — Home Page Implementation
-**Requirement:** Proceed to Phase 5 to implement the 20-section Home Page.
+**Phase:** 6/8 — Services and About Pages
+**Requirement:** Proceed to Phase 6 to implement the internal informational pages.
 
 **Goals:**
-- Construct the home page layout using the established `.agent/layout-home.md` structural blueprint.
-- Consume content strictly from `content/home.ts` and visuals from `components/visuals/` & `lib/images.ts`.
-- Focus on maintaining high performance, elegant animations, and accurate spacing metrics from the design system.
+- Construct the About Page and Features/Services Page based on `.agent/layout-about.md` and `.agent/layout-features.md`.
+- Ensure consistent component reuse where appropriate (e.g., GlobalCTA, Testimonials).
+- Consume text entirely from `content/about.ts` and `content/features.ts`.
