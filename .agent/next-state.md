@@ -1,13 +1,12 @@
 # Spacedent Next State
 
-**Next Phase:** Phase 2 — Content Files
+**Next Phase:** Phase 3 — Animated Visuals & Image Registry
 
-**Goals for Phase 2:**
-- Create type-safe TypeScript objects within the `content/` directory.
-- Populate content based on the design system's tone (calm, gentle, tech-forward, high trust for families).
-- Centralize all UI text, metadata, and labels. No hardcoded strings in UI components.
-- Outline and detail content for Home, About, Services, etc.
+**Goals for Phase 3:**
+- Source, manage, and optimize imagery using `lib/images.ts`.
+- Create SSR-safe animated SVG visuals in `components/visuals/`.
+- Respect `prefers-reduced-motion` for accessibility.
+- Begin wiring content and visuals to components.
 
 **Handoff Notes:**
-- Content must align with the layout blueprints created in Phase 1.
-- Continue to avoid React component implementation; focus entirely on content structures.
+- Content in the `content/` directory is complete and ready for injection into visual components and page layouts.
