@@ -1,11 +1,11 @@
-# Next State: Phase 4 - Core Layout and Navigation Shell
+# Next State: Phase 5 - Home Page Implementation
 
 **Goal:**
-Build the global structural shell of the application, incorporating the design system tokens, global content, and newly created visual components.
+Assemble the Home Page by combining the content definitions from `content/home.ts`, the image registry `lib/images.ts`, and the animated visual components into a high-converting, "calm-clinic" experience.
 
 **Upcoming Tasks:**
-1. Implement the global `Header` component with responsive navigation (desktop links, mobile hamburger menu).
-2. Implement the global `Footer` component consuming data from `content/global.ts` (including links, contact info, and image credits).
-3. Update `app/layout.tsx` to wrap `children` in these global components.
-4. Ensure dark mode toggle functionality is integrated into the header.
-5. Verify semantic HTML structure (header, main, footer) for accessibility.
+1. Implement the Home Page (`app/page.tsx`) matching the 20 structural sections outlined in `.agent/layout-home.md`.
+2. Build section-specific components in `components/sections/home/` (e.g., `Hero`, `TrustIndicators`, `ServicesGrid`, `Testimonials`).
+3. Integrate visual components like `AnimatedGradientMesh` into the Hero, `LogoMarquee` for trust indicators, and `StepDiagram` for processes.
+4. Ensure generous vertical spacing (`py-24` or `py-32`) and soft shadows/radii per the design system.
+5. Verify semantic HTML and accessibility throughout the page.

@@ -1,19 +1,10 @@
-# Current State: Phase 3 Complete
+# Current State: Phase 4 Complete
 
 **Completed:**
-- Updated `next.config.mjs` to allow remote images from `images.unsplash.com`.
-- Created a robust image registry at `lib/images.ts` mapping specific Unsplash URLs (with query params) to named variables, including necessary photographer credits.
-- Built 8 reusable, animated visual components in `components/visuals/`:
-  - `AnimatedGradientMesh`
-  - `LogoMarquee`
-  - `AnimatedToothIllustration`
-  - `AnimatedServiceIcons`
-  - `FloatingBlobs`
-  - `CTAGlow`
-  - `StepDiagram`
-  - `AvatarStack`
-- Ensured all visual components use the OKLCH color variables from the design system, and animations respect `prefers-reduced-motion` and hydration constraints.
-- No local images were added to `public/`; all assets route through the registry.
+- Set up actual global Next.js fonts (`Lora` and `Plus_Jakarta_Sans`) in `app/layout.tsx`.
+- Built the global `Header` component (`components/global/Header.tsx`) with a scroll-responsive background, mobile drawer, theme toggle, and the `AnimatedToothIllustration` logo.
+- Built the global `Footer` component (`components/global/Footer.tsx`) with contact details, hours, global navigation links, and dynamic Unsplash image credits extracted from the registry.
+- Updated `app/layout.tsx` to wrap the entire application in a semantic `flex min-h-screen flex-col` shell, enforcing the Header -> Main -> Footer flow.
 
 **Current Status:**
-- Phase 3 (Animated Visuals & Image Registry) is complete. The foundational aesthetic primitives are established. The project is now ready to begin building the layout shell and consuming the content defined in Phase 2.
+- Phase 4 (Core Layout and Navigation Shell) is complete. The architectural foundation is fully established, meaning the site now renders a consistent shell with functioning light/dark modes and navigation on all routes. Ready for page-level implementation.
