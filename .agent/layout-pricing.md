@@ -1,24 +1,22 @@
-# Pricing Page Layout Blueprint
+# pricing Page Layout Blueprint
 
-1. **Global Header:** Standard navigation.
-2. **Hero Section (Investment in You):** Soft, reassuring hero section setting the tone that aesthetic work is an investment in confidence.
-3. **Pricing Philosophy:** A text block explaining the bespoke nature of pricing and the value of high-end materials and expertise.
-4. **Consultation Fees:** Clear, distinct box detailing initial consultation costs (deductible from treatments, etc.).
-5. **Bridal Packages Category:** Header for bundled services.
-6. **Bridal Package 1 (The Essential):** Card layout, list of inclusions, starting price.
-7. **Bridal Package 2 (The Signature):** Highlighted card (soft glow), comprehensive inclusions.
-8. **Bridal Package 3 (The Ultimate):** Premium tier details.
-9. **Facial Aesthetics Pricing Category:** Header.
-10. **Injectables List:** Elegant table or list layout for Botox, Fillers (per unit/syringe).
-11. **Skin Treatments List:** Peels, micro-needling, etc.
-12. **Advanced Dentistry Category:** Header.
-13. **Cosmetic Dental List:** Veneers (per tooth), Whitening.
-14. **Restorative Dental List:** Implants, crowns (starting prices).
-15. **Financing Options Intro:** Explanation of payment plans available.
-16. **Partner 1 (CareCredit/EMI):** Logo and brief terms.
-17. **Partner 2 (In-house plan):** Details of any clinic-specific payment structures.
-18. **Insurance Information:** Clarification on what medical vs cosmetic insurance typically covers.
-19. **Hidden Costs Disclaimer:** A transparent section detailing what is NOT included (e.g., specialized aftercare products).
-20. **Custom Quote CTA:** Encouraging users to book a consultation for exact pricing.
-21. **FAQ (Pricing Specific):** 3-4 questions about payment methods and deposits.
-22. **Global Footer:** Standard footer.
+1. **Header:** Global transparent/solid header.
+2. **Hero:** Title and descriptive subtitle.
+3. **Intro/Overview:** High-level summary of the page context.
+4. **Section 4:** Placeholder for detailed content block 1.
+5. **Section 5:** Placeholder for detailed content block 2.
+6. **Section 6:** Visual break (image/video).
+7. **Section 7:** Placeholder for detailed content block 3.
+8. **Section 8:** Interactive element or feature highlight 1.
+9. **Section 9:** Interactive element or feature highlight 2.
+10. **Section 10:** Mid-page Call to Action.
+11. **Section 11:** Testimonial or social proof.
+12. **Section 12:** Process or steps breakdown.
+13. **Section 13:** Data or statistics highlight.
+14. **Section 14:** FAQ specific to this topic.
+15. **Section 15:** Secondary visual break.
+16. **Section 16:** Related content or links.
+17. **Section 17:** Final Call to Action.
+18. **Section 18:** Pre-footer additional info.
+19. **Footer:** Global footer.
+20. **Sub-footer:** Legal and copyright.

@@ -1,23 +1,22 @@
-# Terms Page Layout Blueprint
+# terms Page Layout Blueprint
 
-1. **Global Header:** Standard navigation.
-2. **Hero Section:** Very simple, text-only. "Terms of Service".
-3. **Last Updated Date:** Clear timestamp.
-4. **Introduction:** Basic preamble.
-5. **Table of Contents:** Sticky sidebar for easy navigation through legal text.
-6. **Section 1: Acceptance of Terms:** Standard legal text.
-7. **Section 2: Services Provided:** Definition of clinical vs cosmetic services.
-8. **Section 3: Medical Disclaimer:** Crucial section stating website info is not medical advice.
-9. **Section 4: Consultation & Appointments:** Booking policies.
-10. **Section 5: Cancellation Policy:** Detailed rules on deposits and no-shows.
-11. **Section 6: Pricing & Payment:** Terms regarding quotes, financing, and refunds.
-12. **Section 7: User Conduct:** Rules for interacting with the clinic and website.
-13. **Section 8: Intellectual Property:** Copyright regarding website images and text.
-14. **Section 9: Limitation of Liability:** Legal protection clause.
-15. **Section 10: Governing Law:** Jurisdiction (Patiala, Punjab, India).
-16. **Section 11: Changes to Terms:** How updates are communicated.
-17. **Section 12: Contact Information:** Where to send legal inquiries.
-18. **Print Version:** Button to format the page for easy printing.
-19. **Link to Privacy Policy:** Clear cross-linking.
-20. **Global Footer:** Standard footer.
-21. **Sub-footer:** Copyright.
+1. **Header:** Global transparent/solid header.
+2. **Hero:** Title and descriptive subtitle.
+3. **Intro/Overview:** High-level summary of the page context.
+4. **Section 4:** Placeholder for detailed content block 1.
+5. **Section 5:** Placeholder for detailed content block 2.
+6. **Section 6:** Visual break (image/video).
+7. **Section 7:** Placeholder for detailed content block 3.
+8. **Section 8:** Interactive element or feature highlight 1.
+9. **Section 9:** Interactive element or feature highlight 2.
+10. **Section 10:** Mid-page Call to Action.
+11. **Section 11:** Testimonial or social proof.
+12. **Section 12:** Process or steps breakdown.
+13. **Section 13:** Data or statistics highlight.
+14. **Section 14:** FAQ specific to this topic.
+15. **Section 15:** Secondary visual break.
+16. **Section 16:** Related content or links.
+17. **Section 17:** Final Call to Action.
+18. **Section 18:** Pre-footer additional info.
+19. **Footer:** Global footer.
+20. **Sub-footer:** Legal and copyright.

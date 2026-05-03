@@ -1,30 +1,35 @@
-import { Geist, Geist_Mono, Figtree } from "next/font/google"
+import { Cormorant_Garamond, DM_Sans } from "next/font/google";
+import "./globals.css";
 
-import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
-import { cn } from "@/lib/utils";
-
-const figtree = Figtree({subsets:['latin'],variable:'--font-sans'})
-
-const fontMono = Geist_Mono({
+const cormorant = Cormorant_Garamond({
+  variable: "--font-heading",
   subsets: ["latin"],
-  variable: "--font-mono",
-})
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const dmSans = DM_Sans({
+  variable: "--font-sans",
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+});
+
+export const metadata = {
+  title: "Preet Dental & Facial Aesthetics",
+  description: "Premium clinic in Patiala specializing in bridal transformations and advanced dental-aesthetic procedures.",
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", figtree.variable)}
-    >
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
+    <html lang="en">
+      <body
+        className={`${dmSans.variable} ${cormorant.variable} antialiased`}
+      >
+        {children}
       </body>
     </html>
-  )
+  );
 }

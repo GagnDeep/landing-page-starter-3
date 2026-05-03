@@ -1,23 +1,22 @@
-# FAQ Page Layout Blueprint
+# faq Page Layout Blueprint
 
-1. **Global Header:** Standard navigation.
-2. **Hero Section (Client Inquiries):** Clean, spacious header with a search bar prominent in the center.
-3. **Category Navigation:** Sticky sidebar or top bar to jump between topics.
-4. **Category 1 (General Information):** Section header.
-5. **General Q1-Q5:** Accordion style list.
-6. **Category 2 (Bridal Aesthetics):** Section header.
-7. **Bridal Q1-Q5:** Accordion style list (focusing on timelines, when to start prep).
-8. **Category 3 (Facial Treatments):** Section header.
-9. **Facial Q1-Q5:** Accordion style list (focusing on pain, downtime, longevity).
-10. **Category 4 (Advanced Dentistry):** Section header.
-11. **Dental Q1-Q5:** Accordion style list (focusing on procedures, materials).
-12. **Category 5 (Pricing & Financing):** Section header.
-13. **Pricing Q1-Q5:** Accordion style list.
-14. **Category 6 (Aftercare & Recovery):** Section header.
-15. **Aftercare Q1-Q5:** Accordion style list.
-16. **Still Have Questions?:** Text block acknowledging that unique cases require direct answers.
-17. **Contact Methods:** Grid of options (Phone, Email, WhatsApp).
-18. **Response Time Expectation:** A brief note on how quickly the team replies.
-19. **Consultation CTA:** "Book a consultation to discuss your specific needs."
-20. **Global Footer:** Standard footer.
-21. **Sub-footer:** Copyright.
+1. **Header:** Global transparent/solid header.
+2. **Hero:** Title and descriptive subtitle.
+3. **Intro/Overview:** High-level summary of the page context.
+4. **Section 4:** Placeholder for detailed content block 1.
+5. **Section 5:** Placeholder for detailed content block 2.
+6. **Section 6:** Visual break (image/video).
+7. **Section 7:** Placeholder for detailed content block 3.
+8. **Section 8:** Interactive element or feature highlight 1.
+9. **Section 9:** Interactive element or feature highlight 2.
+10. **Section 10:** Mid-page Call to Action.
+11. **Section 11:** Testimonial or social proof.
+12. **Section 12:** Process or steps breakdown.
+13. **Section 13:** Data or statistics highlight.
+14. **Section 14:** FAQ specific to this topic.
+15. **Section 15:** Secondary visual break.
+16. **Section 16:** Related content or links.
+17. **Section 17:** Final Call to Action.
+18. **Section 18:** Pre-footer additional info.
+19. **Footer:** Global footer.
+20. **Sub-footer:** Legal and copyright.

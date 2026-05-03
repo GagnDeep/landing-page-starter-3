@@ -1,23 +1,22 @@
-# Contact Page Layout Blueprint
+# contact Page Layout Blueprint
 
-1. **Global Header:** Standard navigation.
-2. **Hero Section (Connect With Us):** Very minimal hero, focusing entirely on typography and calm spacing.
-3. **Primary Contact Info Block:** Large typography for Phone Number and Email.
-4. **Physical Location:** Address details stylized elegantly.
-5. **Map Integration:** A stylized, desaturated map (not a harsh Google Map iframe if possible, or heavily themed) showing the Patiala location.
-6. **Operating Hours:** Clean list of opening hours, including special weekend or evening consultation slots.
-7. **Contact Form Header:** "Send an Inquiry".
-8. **Form Row 1:** Name & Pronouns (side-by-side).
-9. **Form Row 2:** Email & Phone (side-by-side).
-10. **Form Row 3:** Area of Interest (Dropdown: Bridal, Dental, Facial, Other).
-11. **Form Row 4:** Preferred Consultation Date/Time.
-12. **Form Row 5:** Open Message area.
-13. **Form Submit Button:** Full width, glowing primary color.
-14. **Direct Messaging Options:** Links to WhatsApp or Instagram DM for quick queries.
-15. **What to Expect:** A brief timeline of what happens after submitting the form (e.g., "Our concierge will contact you within 24 hours").
-16. **Parking & Accessibility:** Practical information for visiting the clinic in Leela Bhawan.
-17. **Travel Info (For Out-of-Town Brides):** Brief section on nearby hotels or travel arrangements the clinic can assist with.
-18. **Emergency Contact:** Information for post-procedure dental emergencies.
-19. **Social Media Links:** Aesthetic icons linking to relevant platforms.
-20. **Global Footer:** Standard footer.
-21. **Sub-footer:** Copyright.
+1. **Header:** Global transparent/solid header.
+2. **Hero:** Title and descriptive subtitle.
+3. **Intro/Overview:** High-level summary of the page context.
+4. **Section 4:** Placeholder for detailed content block 1.
+5. **Section 5:** Placeholder for detailed content block 2.
+6. **Section 6:** Visual break (image/video).
+7. **Section 7:** Placeholder for detailed content block 3.
+8. **Section 8:** Interactive element or feature highlight 1.
+9. **Section 9:** Interactive element or feature highlight 2.
+10. **Section 10:** Mid-page Call to Action.
+11. **Section 11:** Testimonial or social proof.
+12. **Section 12:** Process or steps breakdown.
+13. **Section 13:** Data or statistics highlight.
+14. **Section 14:** FAQ specific to this topic.
+15. **Section 15:** Secondary visual break.
+16. **Section 16:** Related content or links.
+17. **Section 17:** Final Call to Action.
+18. **Section 18:** Pre-footer additional info.
+19. **Footer:** Global footer.
+20. **Sub-footer:** Legal and copyright.
