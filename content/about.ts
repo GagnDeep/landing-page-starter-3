@@ -36,3 +36,45 @@ export const aboutFacility: SectionContent = {
   headline: "A Space Designed for You",
   body: "Step into a clinic that feels more like a welcoming lounge than a medical facility. Our carefully curated environment features calming aesthetics, plush seating, and ambient lighting to soothe your senses from the moment you arrive. Behind the scenes, our operatories are equipped with world-class dental technology to deliver precise, efficient care.",
 }
+
+export const aboutWhy: SectionContent = {
+  headline: "Why Choose Spacedent?",
+  body: "We understand that visiting the dentist isn't always something people look forward to. That's why we've purposefully designed every aspect of Spacedent to feel different. From the soothing color palette of our waiting lounge to the state-of-the-art noise-canceling headphones offered during procedures, our goal is to shift your perspective on dental care from a clinical chore to a personalized wellness experience.",
+}
+
+export const aboutTimeline = [
+  {
+    year: "2018",
+    title: "The Vision",
+    description: "Dr. Vikramjit and Dr. Arshiya envisioned a practice that prioritized patient comfort above all else.",
+  },
+  {
+    year: "2020",
+    title: "Opening Doors",
+    description: "Spacedent officially opened in Patiala, introducing single-sitting RCTs and specialized pediatric care under one roof.",
+  },
+  {
+    year: "2023",
+    title: "Expansion",
+    description: "Expanded our facility to include a dedicated digital imaging wing and a specialized pediatric lounge.",
+  },
+]
+
+export const aboutCommunity: SectionContent = {
+  headline: "Rooted in the Patiala Community",
+  body: "We believe in giving back to the community that supports us. Spacedent regularly hosts free dental camps in local schools, focusing on early childhood preventive care and oral hygiene education.",
+}
+
+export const aboutCta: SectionContent = {
+  headline: "Ready to Experience the Difference?",
+  subheading: "Join the Spacedent family and take the first step towards a healthier, more confident smile.",
+  cta: {
+    label: "Book Your Appointment",
+    href: "/contact",
+  }
+}
+
+export const aboutTeamTitle = "Meet Our Team"
+export const aboutTeamSubtitle = "Experienced specialists committed to making your visit comfortable, effective, and stress-free."
+
+export const aboutTimelineTitle = "Our Journey"

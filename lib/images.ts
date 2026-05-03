@@ -20,7 +20,7 @@ export const SITE_IMAGES: Record<string, Record<string, ImageAsset>> = {
       credit: { name: "Caroline LM", link: "https://unsplash.com/@carolinelm" },
     },
     about: {
-      src: buildUnsplashUrl("1598256989805-a54449cc4527"),
+      src: buildUnsplashUrl("1576091160399-112ba8d25d1d"),
       alt: "Dentist and patient smiling in a welcoming clinic",
       credit: {
         name: "Atikah Akhtar",
@@ -46,19 +46,19 @@ export const SITE_IMAGES: Record<string, Record<string, ImageAsset>> = {
       },
     },
     aligners: {
-      src: buildUnsplashUrl("1600171207604-0ee0c427dbcd"), // Generic substitute for aligner
+      src: buildUnsplashUrl("1576091160399-112ba8d25d1d"), // Generic substitute for aligner
       alt: "Clear orthodontic aligners on a pristine surface",
       credit: { name: "Lesy Fesyk", link: "https://unsplash.com/@lesyf" },
     },
     cosmetic: {
-      src: buildUnsplashUrl("1536840656627-84bc0f952f94"),
+      src: buildUnsplashUrl("1606811841689-23dfddce3e95"),
       alt: "Confident, bright smile",
       credit: { name: "Jurica Koletić", link: "https://unsplash.com/@jblesly" },
     },
   },
   clinic: {
     reception: {
-      src: buildUnsplashUrl("1586525198428-91fb17316fc1"), // Generic substitute for modern clinic
+      src: buildUnsplashUrl("1519494026892-80bbd2d6fd0d"), // Generic substitute for modern clinic
       alt: "Welcoming and modern clinic reception area",
       credit: {
         name: "Rusty Watson",

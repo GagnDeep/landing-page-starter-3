@@ -1,6 +1,11 @@
-# Next State
+# Next Phase Hand-Off
 
-Phase: 6/8 — About, Team, and Specialized Services
+## Target Phase
+Phase 7: Pricing, Blog, and FAQ Pages
 
-- Phase 5 homepage implementation is complete.
-- The project is ready for Phase 6: implementing the detailed About page (including the Team grid) and the Specialized Services feature pages based on their respective layout blueprints and content files.
+## Required Actions
+- Build `app/pricing/page.tsx` utilizing blueprints from `.agent/layout-pricing.md` and content from `content/pricing.ts`.
+- Build `app/blog/page.tsx` utilizing blueprints from `.agent/layout-blog.md` and content from `content/blog.ts`.
+- Build `app/faq/page.tsx` utilizing blueprints from `.agent/layout-faq.md` and content from `content/faq.ts`.
+- Continue ensuring all text is dynamically sourced from content files, avoiding any hardcoded strings.
+- Integrate visual/animated components where appropriate to maintain brand consistency.
