@@ -1,14 +1,14 @@
 # Next Phase Readiness
 **Project:** Dr. Bansal’s Dental Care
-**Target Phase:** 2/8 (Content Files)
+**Target Phase:** 3/8 (Animated Visuals & Image Registry)
 
-## Objectives for Phase 2
-- Generate centralized, type-safe TypeScript content files within a new `content/` directory.
-- All UI text, metadata, and labels must be mapped out as strictly typed objects to prevent hardcoding strings in future React components.
-- The tone of all content must strictly align with the "friendly-professional" and "neighbourhood comfort" vibe established in the Phase 1 design system.
-- Ensure all content references the layouts documented in `.agent/layout-*.md`.
+## Objectives for Phase 3
+- Source high-quality, professional imagery that aligns with the "calm-clinic" aesthetic and matches the content descriptions (e.g., welcoming reception, smiling patients, modern technology).
+- Establish an image registry or configuration (e.g., `lib/images.ts`, updates to `next.config.mjs`) to manage assets centrally.
+- Develop the core animated visual components (e.g., a custom spinner, gentle page transitions, hover effects) that will be used throughout the UI.
+- Ensure all animated visuals respect the motion principles defined in `.agent/design-system.md` (e.g., slow to medium durations, ease-in-out curves, respecting `prefers-reduced-motion`).
 
 ## Prerequisites Met
 - [x] Design System established.
 - [x] Layout structures documented.
-- [x] Project state initialized.
+- [x] Type-safe content architecture developed.
