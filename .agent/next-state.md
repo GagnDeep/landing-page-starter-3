@@ -1,11 +1,10 @@
-# Next State: Phase 6 - Services, Pricing, and About Pages
+# Next State: Phase 7 - Blog, FAQ, and Contact Pages
 
 **Goal:**
-Build the core informational pages of the clinic, detailing the dental treatments, cost transparency, and the team's background, using the pre-established components and content strings.
+Establish the site's interaction points (Contact), detailed question resolution (FAQ), and content marketing hub (Blog).
 
 **Upcoming Tasks:**
-1. Implement the `About` page (`app/about/page.tsx`), highlighting the clinic's origin, the doctor's full bio, and core values.
-2. Implement the `Features` (Services) page (`app/features/page.tsx`), building a deeper breakdown of Preventive, Restorative, Cosmetic, and Pediatric care, with anchor linking.
-3. Implement the `Pricing` page (`app/pricing/page.tsx`), focusing on clear financial information, insurance acceptance, and flexible EMIs.
-4. Maintain consistent padding, responsive grids, and the "calm-clinic" aesthetic across all new pages.
-5. Reuse existing animated visuals or shadcn UI elements (like `Accordion` or `Table`) where applicable.
+1. Implement the `Contact` page (`app/contact/page.tsx`), handling the grid layout for clinic info, operating hours, map (iframe), and a robust, accessible Contact Form structure (UI only, no backend).
+2. Implement the `FAQ` page (`app/faq/page.tsx`), utilizing `shadcn` Accordions mapped to categorized questions with an interactive or visually distinct search/filter UI.
+3. Implement the `Blog` page (`app/blog/page.tsx`), creating a visually appealing grid for article cards, category filters, and a hero component for the featured post.
+4. Continue strict adherence to `content/*.ts` consumption and "calm-clinic" spacing guidelines.
