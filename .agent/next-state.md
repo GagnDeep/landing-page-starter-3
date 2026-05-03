@@ -1,6 +1,6 @@
 # Next State
 
-Phase: 2/8 — Content Files
+Phase: 3/8 — Animated Visuals & Image Registry
 
-- The project is ready for content mapping in Phase 2.
-- Create TSX content files to manage copy, strings, and data structures.
+- Phase 2 content mapping is complete.
+- The project is now unblocked and ready for Phase 3: integrating image assets, animated visuals, and setting up the centralized image registry.
