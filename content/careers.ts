@@ -29,6 +29,8 @@ export const careersContent = {
   openings: {
     title: "Current Openings",
     noOpeningsMessage: "We are always looking for talented individuals. Even if you don't see a specific role listed below, feel free to submit your resume.",
+    applyNowLabel: "Apply Now",
+    noRolesLabel: "No specific roles currently posted.",
     items: [
       // Example structure for when roles are open:
       // { title: "Dental Assistant", type: "Full-Time", location: "Patiala" }
@@ -56,6 +58,10 @@ export const careersContent = {
       message: "Why do you want to join our team?",
       file: "Upload Resume (PDF or Word)"
     },
-    submitLabel: "Submit Application"
+    submitLabel: "Submit Application",
+    submittingLabel: "Submitting...",
+    successTitle: "Application Received",
+    successMessage: "Thank you for your interest! We will review your profile and get back to you soon.",
+    uploadPlaceholder: "Click to upload resume"
   }
 };

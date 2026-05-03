@@ -1,10 +1,10 @@
-# Next State: Phase 8 - Careers, Legal, and Final Polish
+# Next State: Ready for Deployment
 
 **Goal:**
-Conclude the site build by implementing the remaining secondary pages and performing a final audit for design fidelity, accessibility, and performance.
+The development phase of Dr. Bansal's Dental Care website is officially complete.
 
-**Upcoming Tasks:**
-1. Implement the `Careers` page (`app/careers/page.tsx`) utilizing existing structural patterns.
-2. Implement the `Terms of Service` (`app/terms/page.tsx`) and `Privacy Policy` (`app/privacy/page.tsx`) pages, prioritizing highly readable, narrow prose layouts.
-3. Replace any lingering hardcoded strings (e.g. "Read Article", "Get Directions", "Operating Hours") found in recent components by moving them to the content dictionaries.
-4. Perform a final visual and functional QA to ensure strict "calm-clinic" adherence across the complete site.
+**Upcoming Tasks (Post-Development / Ops):**
+1. Connect repository to hosting provider (e.g., Vercel, Netlify).
+2. Configure domain mapping (DNS setup).
+3. Switch out generic placeholder Unsplash imagery with final, client-approved photography in `lib/images.ts`.
+4. Connect forms (Contact, Careers) to a backend service or email integration platform (e.g., Resend, Formspree) to handle live submissions.
