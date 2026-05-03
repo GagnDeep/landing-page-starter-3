@@ -1,3 +1,3 @@
 # Next State
 
-Phase 2 — Content Files is the next requirement.
+Phase 3 — Animated Visuals & Image Registry is the next requirement.
