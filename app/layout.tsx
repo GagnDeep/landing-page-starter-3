@@ -1,14 +1,15 @@
-import { Geist, Geist_Mono, Figtree } from "next/font/google"
+import { Cormorant_Garamond, Inter } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils";
 
-const figtree = Figtree({subsets:['latin'],variable:'--font-sans'})
+const inter = Inter({subsets:['latin'],variable:'--font-sans'})
 
-const fontMono = Geist_Mono({
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  variable: "--font-mono",
+  weight: ["400", "600"],
+  variable: "--font-heading",
 })
 
 export default function RootLayout({
@@ -20,7 +21,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", figtree.variable)}
+      className={cn("antialiased", cormorant.variable, "font-sans", inter.variable)}
     >
       <body>
         <ThemeProvider>{children}</ThemeProvider>
