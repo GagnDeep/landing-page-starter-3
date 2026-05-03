@@ -1,7 +1,8 @@
-# Next State: Phase 2 (Content Files)
+# Next State: Phase 3 (Animated Visuals & Image Registry)
 
-Once Phase 1 is complete, we will move to Phase 2: Content Files.
+Once Phase 2 is complete, we will move to Phase 3: Animated Visuals & Image Registry.
 
-In Phase 2, we will:
-- Write and centralize all specific marketing copy and content into type-safe structures.
-- No UI code or component implementation will occur until Phase 3/4.
+In Phase 3, we will:
+- Set up the image asset registry using Unsplash.
+- Build pure visual, animated components (e.g. Hero background).
+- Do not build page layouts or shell components yet.
