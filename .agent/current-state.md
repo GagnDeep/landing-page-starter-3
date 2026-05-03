@@ -1,12 +1,12 @@
 # Current State
 
-**Phase:** 2/8 — Content Files
+**Phase:** 3/8 — Animated Visuals & Image Registry
 **Status:** Completed
 
 **Achievements:**
-- Initialized the `content/` repository.
-- Populated 10 TypeScript files (`home.ts`, `about.ts`, `features.ts`, `pricing.ts`, `blog.ts`, `faq.ts`, `contact.ts`, `careers.ts`, `terms.ts`, `privacy.ts`) with structured, typed text.
-- Ensured zero hardcoded strings exist by establishing a central source of truth.
-- Maintained a "warm-professional", authoritative, and hygienic tone across all specific copy referring to Naresh Dental Clinic, Dr. Anshum Gupta, and clinical services.
+- Configured `lib/images.ts` to hold a typed registry of Unsplash image URLs for the clinic (with optimal parameters).
+- Developed 8 reusable visual/animation components in `components/visuals/`: AnimatedChart, AnimatedGradientMesh, AnimatedHeroIllustration, CodeWindowTyping, DotMatrixGrid, FloatingBlobs, LogoMarquee, and MicroIconSet.
+- Ensured all visual components use design system CSS variables and respect `prefers-reduced-motion` or handle SSR hydration states safely.
+- Updated `next.config.mjs` to authorize `images.unsplash.com`.
 
 **Brand Identity:** Clinical-yet-inviting, patient-centric, high-end medical authority.

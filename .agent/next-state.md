@@ -1,8 +1,8 @@
 # Next State
 
-**Phase:** 3/8 — Animated Visuals & Image Registry
-**Requirement:** Proceed to Phase 3 to create animated visuals and set up an image registry.
+**Phase:** 4/8 — Core Layout and Global Components
+**Requirement:** Proceed to Phase 4 to assemble the structural global components.
 
 **Goals:**
-- Prepare high-quality image definitions and animations to pair with the content files.
-- Maintain SSR compatibility and ensure any visual motions align with the brand guidelines (e.g., accessible motion, appropriate aesthetics).
+- Construct global navigation, footer, and shell components.
+- Integrate the visual primitives and string content developed in previous phases into these global containers.
