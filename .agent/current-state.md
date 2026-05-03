@@ -1,1 +1,1 @@
-Phase 1 complete. Design system and layout blueprints established.
+Phase 2 complete. All site content is now defined in the content/ directory.
