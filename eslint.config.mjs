@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Ignore agent tracking files to prevent linting errors
+    ".agent/**",
+    ".agents/**",
   ]),
 ]);
 
