@@ -30,5 +30,30 @@ export const blogContent = {
     slug: "why-you-shouldnt-ignore-bleeding-gums"
   },
 
-  recentPostsHeading: "Recent Articles"
+  recentPostsHeading: "Recent Articles",
+  readArticleLabel: "Read Article",
+
+  mockPosts: [
+    {
+      title: "5 Tips for Building Better Habits in Kids",
+      excerpt: "Make brushing fun and effective with these simple nightly routines.",
+      date: "October 10, 2023",
+      category: "Kids",
+      slug: "tips-building-better-habits-kids",
+    },
+    {
+      title: "The Truth About Professional Teeth Whitening",
+      excerpt: "What to expect during a whitening session and how to maintain the results.",
+      date: "October 02, 2023",
+      category: "Cosmetic",
+      slug: "truth-about-professional-teeth-whitening",
+    },
+    {
+      title: "Welcome to Our New Leela Bhawan Clinic Location",
+      excerpt: "We've expanded! Take a virtual tour of our newly designed, calm-clinic environment.",
+      date: "September 28, 2023",
+      category: "Clinic News",
+      slug: "welcome-new-clinic-location",
+    },
+  ]
 };

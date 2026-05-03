@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Alert01Icon, Location01Icon, TimeQuarterIcon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { globalContent } from "@/content/global";
+import { contactContent } from "@/content/contact";
 
 export function EmergencyAndInfo() {
   return (
@@ -44,7 +45,7 @@ export function EmergencyAndInfo() {
             </p>
             <Button variant="outline" asChild className="rounded-full w-full sm:w-auto">
               <a href={globalContent.contact.mapUrl} target="_blank" rel="noopener noreferrer">
-                Get Directions
+                {contactContent.location.directionsLabel}
               </a>
             </Button>
           </div>
@@ -55,7 +56,7 @@ export function EmergencyAndInfo() {
               <HugeiconsIcon icon={TimeQuarterIcon} className="size-6" strokeWidth={2} />
             </div>
             <h3 className="font-heading text-2xl font-bold text-foreground mb-6">
-              Operating Hours
+              {contactContent.hoursTitle}
             </h3>
             <ul className="w-full space-y-4 text-muted-foreground">
               {globalContent.hours.map((hour, idx) => (

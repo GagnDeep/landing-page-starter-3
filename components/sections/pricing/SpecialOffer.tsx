@@ -15,7 +15,7 @@ export function SpecialOffer() {
           <div className="relative z-10 grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <div className="inline-flex items-center rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-1.5 text-sm font-semibold mb-8 backdrop-blur-md">
-                New Patients Only
+                {pricingContent.newPatientSpecial.badge}
               </div>
               <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6">
                 {pricingContent.newPatientSpecial.title}
@@ -35,7 +35,7 @@ export function SpecialOffer() {
             </div>
 
             <div className="bg-background/5 rounded-[2rem] p-8 border border-white/10 backdrop-blur-sm">
-              <h3 className="font-heading text-2xl font-bold mb-6">What&apos;s Included:</h3>
+              <h3 className="font-heading text-2xl font-bold mb-6">{pricingContent.newPatientSpecial.includesTitle}</h3>
               <ul className="space-y-4">
                 {pricingContent.newPatientSpecial.includes.map((item, idx) => (
                   <li key={idx} className="flex items-center gap-4 text-lg text-primary-foreground/90">

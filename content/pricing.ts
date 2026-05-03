@@ -26,6 +26,8 @@ export const pricingContent = {
     title: "New Patient Welcome Offer",
     description: "Experience our clinic for the first time with a comprehensive evaluation.",
     price: "₹499",
+    badge: "New Patients Only",
+    includesTitle: "What's Included:",
     includes: [
       "Complete Oral Examination",
       "Digital X-Rays (if required)",
@@ -39,6 +41,7 @@ export const pricingContent = {
     title: "Estimated Procedure Costs",
     description: "While exact costs depend on your specific clinical needs, we provide these starting estimates for complete transparency. A detailed, written cost breakdown is always provided before any treatment begins.",
     disclaimer: "*Prices are indicative starting rates and may vary based on complexity.",
+    tableHeaders: { procedure: "Procedure", range: "Estimated Range" },
     items: [
       { name: "Consultation", range: "₹300 - ₹500" },
       { name: "Scaling & Polishing", range: "₹800 - ₹1,500" },

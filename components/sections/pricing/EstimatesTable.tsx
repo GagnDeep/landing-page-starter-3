@@ -17,8 +17,8 @@ export function EstimatesTable() {
           <table className="w-full text-left border-collapse">
             <thead>
               <tr className="bg-muted/30 border-b border-border/50">
-                <th className="py-5 px-6 font-heading font-semibold text-foreground text-lg">Procedure</th>
-                <th className="py-5 px-6 font-heading font-semibold text-foreground text-lg text-right">Estimated Range</th>
+                <th className="py-5 px-6 font-heading font-semibold text-foreground text-lg">{pricingContent.estimates.tableHeaders.procedure}</th>
+                <th className="py-5 px-6 font-heading font-semibold text-foreground text-lg text-right">{pricingContent.estimates.tableHeaders.range}</th>
               </tr>
             </thead>
             <tbody>

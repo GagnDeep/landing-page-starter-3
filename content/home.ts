@@ -61,6 +61,7 @@ export const homeContent = {
   // 6. The "Calm Clinic" Difference
   features: {
     title: "Why Choose Our Practice?",
+    subtitle: "We combine modern clinical excellence with a compassionate, human-centered approach to ensure you receive the best possible care without the anxiety.",
     items: [
       {
         title: "Anxiety-Free Environment",

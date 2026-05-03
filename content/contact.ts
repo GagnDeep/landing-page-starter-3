@@ -26,9 +26,14 @@ export const contactContent = {
       email: "Email Address",
       date: "Preferred Date",
       reason: "Reason for Visit (e.g., Routine Checkup, Pain, Whitening)",
-      message: "Additional Details or Questions"
+      message: "Additional Details or Questions",
+      reasonPlaceholder: "e.g., Routine Checkup, Tooth Pain"
     },
-    submitLabel: "Send Request"
+    submitLabel: "Send Request",
+    sendingLabel: "Sending...",
+    successTitle: "Request Sent!",
+    successMessage: "Our team will contact you shortly to confirm your appointment.",
+    successButton: "Send another message"
   },
 
   emergencyCallout: {
@@ -39,6 +44,12 @@ export const contactContent = {
   location: {
     title: "How to Find Us",
     parkingInfo: "We have dedicated patient parking available directly in front of the clinic.",
-    transitInfo: "Located centrally in SST Nagar, easily accessible via local auto-rickshaws and cabs."
-  }
+    transitInfo: "Located centrally in SST Nagar, easily accessible via local auto-rickshaws and cabs.",
+    directionsLabel: "Get Directions",
+    generalPhoneLabel: "General:",
+    emergencyPhoneLabel: "Emergency:",
+    emailLabel: "Send Email"
+  },
+
+  hoursTitle: "Operating Hours"
 };

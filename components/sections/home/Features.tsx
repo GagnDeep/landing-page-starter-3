@@ -13,7 +13,7 @@ export function Features() {
               {homeContent.features.title}
             </h2>
             <p className="text-lg text-muted-foreground">
-              We combine modern clinical excellence with a compassionate, human-centered approach to ensure you receive the best possible care without the anxiety.
+              {homeContent.features.subtitle}
             </p>
           </div>
 
