@@ -38,11 +38,11 @@ export const SITE_IMAGES: Record<string, Record<string, ImageAsset>> = {
       },
     },
     pediatric: {
-      src: buildUnsplashUrl("1588776814503-46f5580de88c"),
-      alt: "Happy child smiling in a dental chair",
+      src: buildUnsplashUrl("1604881988758-f76ad2f7aac1"), // Reliable image
+      alt: "Happy child smiling",
       credit: {
-        name: "Hush Naidoo Jade Photography",
-        link: "https://unsplash.com/@hushnaidoo",
+        name: "Diana Polekhina",
+        link: "https://unsplash.com/@diana_pole",
       },
     },
     aligners: {
