@@ -1,6 +1,6 @@
-# Next State: Phase 2
+# Next State: Phase 3
 
-## Phase 2 — Content Files
+## Phase 3 — Animated Visuals & Image Registry
 
-**Goal:** Develop all content structures required to populate the UI.
-**Requirements:** Create type-safe TS/JSON files to store all textual content, metadata, and labels. No hardcoded strings should exist in UI components in later phases.
+**Goal:** Curate image assets and create functional, SSR-safe animated visual components.
+**Requirements:** Download/register Unsplash imagery. Create TSX components for visual/animations without writing the core page layouts.
