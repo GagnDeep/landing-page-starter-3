@@ -1,9 +1,8 @@
 # Next State
 
-**Phase:** 2/8 — Content Files
-**Requirement:** Proceed to Phase 2 to create type-safe TypeScript objects for all UI text, metadata, and labels within the `content/` directory.
+**Phase:** 3/8 — Animated Visuals & Image Registry
+**Requirement:** Proceed to Phase 3 to create animated visuals and set up an image registry.
 
 **Goals:**
-- Ensure no hardcoded strings exist in UI components.
-- Map content structured to align with the layouts defined in `.agent/layout-*.md`.
-- Maintain the "warm-professional" and "hygienic" brand tone in all copy.
+- Prepare high-quality image definitions and animations to pair with the content files.
+- Maintain SSR compatibility and ensure any visual motions align with the brand guidelines (e.g., accessible motion, appropriate aesthetics).
