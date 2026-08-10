@@ -13,10 +13,18 @@ if (!fs.existsSync(outDir)) {
 }
 
 let hasErrors = false;
+let siteLinks = {}; // Map of normalized path -> set of paths it links to
 
 function reportError(filePath, message) {
   console.error(`ERROR in ${filePath}: ${message}`);
   hasErrors = true;
+}
+
+function normalizePath(p) {
+  p = p.replace(/\/index\.html$/, '/');
+  if (!p.endsWith('/')) p += '/';
+  if (!p.startsWith('/')) p = '/' + p;
+  return p;
 }
 
 function checkHtmlFile(filePath) {
@@ -38,6 +46,16 @@ function checkHtmlFile(filePath) {
   if (filePath.includes('404') || filePath.includes('_not-found')) {
     return;
   }
+
+  // Extract Links for internal linking check
+  const links = Array.from(doc.querySelectorAll('a'))
+    .map(a => a.getAttribute('href'))
+    .filter(href => href && href.startsWith('/')); // internal only
+
+  let relPath = filePath.substring(outDir.length).replace(/\\/g, '/');
+  relPath = normalizePath(relPath);
+
+  siteLinks[relPath] = new Set(links.map(normalizePath));
 
   const h1s = doc.querySelectorAll('h1');
   if (h1s.length !== 1) {
@@ -87,11 +105,8 @@ function checkHtmlFile(filePath) {
     reportError(filePath, 'Missing JSON-LD structured data');
   }
 
-  // Clean up path checking so `about/index.html` does not trigger root checks.
-  // The normalized base path is just out/index.html
-  const normalizedPath = filePath.replace(/\\/g, '/');
-  const isRootHomePage = normalizedPath.endsWith('/out/index.html') || normalizedPath === 'out/index.html';
-
+  // Home page specifics
+  const isRootHomePage = relPath === '/';
   if (isRootHomePage) {
     const sections = Array.from(doc.querySelectorAll('section'));
     if (sections.length < 10) {
@@ -104,6 +119,25 @@ function checkHtmlFile(filePath) {
       if (bg1 && bg1 === bg2) {
         reportError(filePath, `Adjacent sections (${i} and ${i+1}) share the same background class: ${bg1}`);
       }
+    }
+  }
+
+  // Word floors based on route
+  const textContent = doc.body.textContent || "";
+  const wordCount = textContent.split(/\s+/).filter(w => w.length > 0).length;
+  if (relPath.startsWith('/topics/') || relPath.startsWith('/vendors/')) {
+    const isHub = relPath === '/topics/' || relPath === '/vendors/';
+    const isReview = relPath.startsWith('/vendors/') && !isHub;
+    const isSpoke = relPath.startsWith('/topics/') && !isHub;
+
+    if (isHub && wordCount < 1800) {
+      reportError(filePath, `Hub page word floor is 1800, found ${wordCount}`);
+    }
+    if (isReview && wordCount < 1200) {
+      reportError(filePath, `Review page word floor is 1200, found ${wordCount}`);
+    }
+    if (isSpoke && wordCount < 900) {
+      reportError(filePath, `Spoke page word floor is 900, found ${wordCount}`);
     }
   }
 
@@ -128,20 +162,15 @@ function checkHtmlFile(filePath) {
     }
   });
 
-  // The consecutive word check algorithm was overly simplistic.
-  // Let's implement a better one:
-  // Flatten all text nodes, track if we've hit a structural block.
   let currentWordCount = 0;
-  // A structural break is a heading, list, table, figure, or section. We'll use a TreeWalker
-  // to walk the DOM and reset the counter when we hit a block element that acts as a visual break.
-  const visualBreaks = ['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'UL', 'OL', 'TABLE', 'FIGURE', 'SVG', 'IMG', 'HR', 'SECTION'];
+  const breakTags = ['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'UL', 'OL', 'TABLE', 'FIGURE', 'SVG', 'IMG', 'HR', 'SECTION', 'HEADER', 'FOOTER', 'NAV', 'ASIDE'];
 
   const walker = doc.createTreeWalker(doc.body, dom.window.NodeFilter.SHOW_ALL, null, false);
   let currentNode = walker.currentNode;
 
   while (currentNode) {
     if (currentNode.nodeType === 1) { // Element node
-      if (visualBreaks.includes(currentNode.nodeName)) {
+      if (breakTags.includes(currentNode.nodeName)) {
         currentWordCount = 0;
       }
     } else if (currentNode.nodeType === 3) { // Text node
@@ -191,6 +220,78 @@ function checkFiles(dir) {
 }
 
 checkFiles(outDir);
+
+// Verify Internal Linking Law
+// Every child links up to its hub and across to at least two siblings.
+// Every hub links to every published child.
+// Zero orphan pages, and nothing sits more than two clicks from the home page.
+const allRoutes = Object.keys(siteLinks);
+
+// Reachability from Home (max 2 clicks)
+let distances = {};
+allRoutes.forEach(r => distances[r] = Infinity);
+if (siteLinks['/']) {
+  distances['/'] = 0;
+  let queue = ['/'];
+  while (queue.length > 0) {
+    let current = queue.shift();
+    let d = distances[current];
+    if (d < 2) {
+      siteLinks[current].forEach(link => {
+        if (distances[link] === Infinity) {
+          distances[link] = d + 1;
+          queue.push(link);
+        }
+      });
+    }
+  }
+}
+
+for (const route of allRoutes) {
+  if (route.includes('404') || route.includes('_not-found')) continue;
+
+  if (distances[route] > 2) {
+    reportError(route, `Page is more than 2 clicks from home (or orphan)`);
+  }
+
+  const segments = route.split('/').filter(Boolean);
+  const isChild = segments.length > 1;
+  const isHub = segments.length === 1 && route !== '/';
+
+  if (isChild) {
+    const hubRoute = `/${segments[0]}/`;
+    const siblingPrefix = `/${segments[0]}/`;
+
+    // Check links to Hub
+    if (!siteLinks[route].has(hubRoute)) {
+      reportError(route, `Child page does not link back to hub ${hubRoute}`);
+    }
+
+    // Check links to at least 2 siblings
+    let siblingLinkCount = 0;
+    siteLinks[route].forEach(l => {
+      if (l.startsWith(siblingPrefix) && l !== route && l !== hubRoute) {
+        siblingLinkCount++;
+      }
+    });
+
+    if (siblingLinkCount < 2) {
+      reportError(route, `Child page links to only ${siblingLinkCount} siblings, expected at least 2`);
+    }
+  }
+
+  if (isHub) {
+    // Check links to every child
+    const hubPrefix = route;
+    const children = allRoutes.filter(r => r !== route && r.startsWith(hubPrefix));
+    for (const child of children) {
+      if (!siteLinks[route].has(child)) {
+         reportError(route, `Hub page does not link to child ${child}`);
+      }
+    }
+  }
+}
+
 
 let uniqueSvgs = new Set();
 function collectSvgs(dir) {

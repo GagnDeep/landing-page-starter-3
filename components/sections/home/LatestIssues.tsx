@@ -6,12 +6,13 @@ export function LatestIssues() {
   return (
     <section className="bg-background py-16 md:py-24">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div className="max-w-[66ch]">
-            <span className="font-mono text-sm tracking-wider text-primary uppercase mb-4 block flex items-center gap-2">
-              <HugeiconsIcon icon={Archive01Icon} className="w-4 h-4" /> The Archive
+            <span className="mb-4 block flex items-center gap-2 font-mono text-sm tracking-wider text-primary uppercase">
+              <HugeiconsIcon icon={Archive01Icon} className="h-4 w-4" /> The
+              Archive
             </span>
-            <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground">
+            <h2 className="font-heading text-3xl font-semibold text-foreground md:text-4xl">
               Recent Dispatches
             </h2>
           </div>

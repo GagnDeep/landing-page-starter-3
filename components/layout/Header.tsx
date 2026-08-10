@@ -14,12 +14,36 @@ export function Header() {
         </Link>
 
         <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
-          <nav className="flex items-center space-x-6 text-sm font-medium">
+          <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
             <Link
               href="/about/"
               className="text-foreground/60 transition-colors hover:text-foreground/80"
             >
               About
+            </Link>
+            <Link
+              href="/topics/"
+              className="text-foreground/60 transition-colors hover:text-foreground/80"
+            >
+              Topics
+            </Link>
+            <Link
+              href="/vendors/"
+              className="text-foreground/60 transition-colors hover:text-foreground/80"
+            >
+              Vendors
+            </Link>
+            <Link
+              href="/issues/"
+              className="text-foreground/60 transition-colors hover:text-foreground/80"
+            >
+              Issues
+            </Link>
+            <Link
+              href="/jobs/"
+              className="text-foreground/60 transition-colors hover:text-foreground/80"
+            >
+              Jobs
             </Link>
           </nav>
 

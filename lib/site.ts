@@ -4,6 +4,6 @@ export const siteMetadata = {
     "A sponsorship-funded trade publication for working P&C insurance underwriters covering tooling, hiring, market moves, and AI in underwriting.",
   url: "https://instituteofunderwriting.com",
   social: {
-    twitter: "@underwritingdesk",
+    twitter: "https://twitter.com/theinstitutes",
   },
 }

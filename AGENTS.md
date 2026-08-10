@@ -11,7 +11,15 @@
 ## Route Manifest
 - `/` (Home)
 - `/about` (About)
-- (Future passes will add more routes according to brief)
+- `/topics` (Topics Hub)
+- `/topics/[slug]` (Topic Spoke/Guide)
+- `/vendors` (Vendors Hub)
+- `/vendors/[slug]` (Vendor Review)
+- `/issues` (Issues Hub)
+- `/issues/[id]` (Issue Programmatic)
+- `/jobs` (Jobs Hub)
+- `/jobs/[id]` (Job Programmatic)
+- `/tool` (Interactive tool - Pass 3)
 
 ## Rules
 1. **Tokens:** All tokens live in `app/globals.css`.
