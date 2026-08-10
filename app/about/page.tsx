@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs"
 import { Prose } from "@/components/Prose"
 import { buildMetadata } from "@/lib/site"
 import { buildBreadcrumbJsonLd } from "@/lib/json-ld"
+import Link from "next/link"
 
 export const metadata = buildMetadata({
   title: "Methodology",
@@ -21,7 +22,7 @@ export default function About() {
     <div className="flex min-h-screen flex-col">
       <Header />
 
-      <main className="flex-1 py-16 md:py-24">
+      <main className="flex-1 bg-background py-16 md:py-24">
         <div className="container mx-auto max-w-4xl px-4 md:px-8">
           <Breadcrumbs items={[{ name: "Methodology", href: "/about/" }]} />
 
@@ -45,7 +46,7 @@ export default function About() {
               </span>
             </div>
 
-            <Prose>
+            <Prose className="max-w-none">
               <p className="text-lead">
                 The financial tooling space is crowded with affiliate sites that
                 rank tools based on payout rates. We publish data. This page
@@ -65,7 +66,12 @@ export default function About() {
                 This incident underscores a systemic issue: vendors rarely
                 disclose their models, historical losses are quietly omitted,
                 and "survivorship bias" heavily skews marketing materials. We
-                demand evidence.
+                demand evidence. To understand more about these regulatory
+                precedents, read our guide on{" "}
+                <Link href="/guides/sec-enforcement-history/">
+                  SEC Enforcement History
+                </Link>
+                .
               </p>
 
               <h2>2. Data Collection (Capture)</h2>
@@ -111,7 +117,12 @@ export default function About() {
               <h2>4. The Benchmark Comparison</h2>
               <p>
                 Absolute return is meaningless without context. Every tracked
-                trade is compared against the S&P 500 index.
+                trade is compared against the S&P 500 index. If you need a
+                deeper primer on these concepts, read our guide on{" "}
+                <Link href="/guides/understanding-alpha/">
+                  Understanding Alpha and Benchmarks
+                </Link>
+                .
               </p>
               <ul>
                 <li>
@@ -142,7 +153,8 @@ export default function About() {
                 This is precisely why our methodology is public and our tracking
                 apparatus is deterministic. We do not accept payment for
                 favorable rankings, and the data remains visible even when it
-                demonstrates that a tool underperforms the market.
+                demonstrates that a tool underperforms the market. See the live
+                data in our <Link href="/tools/">Tools Directory</Link>.
               </p>
             </Prose>
           </article>
