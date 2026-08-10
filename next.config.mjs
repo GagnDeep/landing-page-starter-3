@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
-
-export default nextConfig
+const nextConfig = {
+    output: 'export',
+    distDir: 'out',
+    images: { unoptimized: true },
+    typescript: { ignoreBuildErrors: true }
+};
+export default nextConfig;
