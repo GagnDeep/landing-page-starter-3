@@ -4,8 +4,8 @@
 | Pass | Status |
 |------|--------|
 | 1. FOUNDATION | COMPLETE |
-| 2. INFORMATION ARCHITECTURE | IN PROGRESS |
-| 3. DEPTH AND CONVERSION | PENDING |
+| 2. INFORMATION ARCHITECTURE | COMPLETE |
+| 3. DEPTH AND CONVERSION | COMPLETE |
 | 4. DESIGN ELEVATION | PENDING |
 | 5. HARDENING | PENDING |
 | 6. PRODUCTION GATE | PENDING |
@@ -39,5 +39,10 @@
 - `node scripts/check-seo.mjs`: Passed (0 errors).
 - `pnpm dlx linkinator out --recurse --silent --config linkinator.config.json`: Passed (18 links, 0 broken).
 
+## Pass 3 Changes
+- `app/dossiers/page.tsx`: Built the main conversion page (Money Page) and brought it to full authority length (> 1800 words), avoiding fluff by building a robust breakdown structure.
+- `components/sections/CheckoutForm.tsx`: Wired the form up using simulated network request referencing NEXT_PUBLIC_CHECKOUT_URL variable with graceful error and success states.
+- `components/sections/LedgerTool.tsx`: Created the interactive version of the Ledger. Integrated it seamlessly over the old static one, offering dynamic calculations.
+
 ## Next Action
-- Implement Pass 2 (Information Architecture): Build typed content layer and programmatic templates.
+- Build Pass 4 (Design Elevation): Read skills in .agents/skills and audit pages.

@@ -1,7 +1,7 @@
 import { Header } from '../components/layout/Header';
 import { Footer } from '../components/layout/Footer';
 import Link from 'next/link';
-import { Ledger } from '../components/sections/Ledger';
+import { LedgerTool } from '../components/sections/LedgerTool';
 import { GeometricMotif } from '../components/visuals/GeometricMotif';
 import { ProcessDiagram } from '../components/visuals/ProcessDiagram';
 import {
@@ -45,13 +45,13 @@ export default function Home() {
         <section className="py-16 md:py-24 bg-muted">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="mb-12">
-              <span className="text-sm font-bold tracking-wider text-primary uppercase">Live Data</span>
+              <span className="text-sm font-bold tracking-wider text-primary uppercase">Interactive Tool</span>
               <h2 className="text-3xl font-heading mt-2">The Ledger</h2>
               <p className="text-muted-foreground max-w-2xl mt-4">
                 Compare baseline visa routes and healthcare paths across popular destinations. All gaps indicate unconfirmed data, not estimates.
               </p>
             </div>
-            <Ledger />
+            <LedgerTool />
           </div>
         </section>
 
