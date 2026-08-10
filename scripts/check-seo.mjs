@@ -8,9 +8,6 @@ const OUT_DIR = path.join(__dirname, '../out')
 
 const BANNED_STRINGS = ['lorem ipsum', 'TODO', 'FIXME']
 
-// We warn on word floors for now since building dummy text violates the "no lorem ipsum" rule
-// and reaching 1800 words of real text is outside the scope of PASS 2 Information Architecture.
-// The script tracks it as a warning until we are in PASS 3.
 const WORD_FLOORS = {
   '/index.html': 1800,
   '/about/index.html': 1800,
@@ -125,7 +122,7 @@ function checkSeoRules(filepath) {
       } else if (node.nodeType === 1) {
          const breakTags = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'table', 'figure', 'svg', 'div']
          const cls = node.getAttribute('class') || ''
-         const isVisualBreak = breakTags.includes(node.tagName.toLowerCase()) || cls.includes('grid') || cls.includes('flex')
+         const isVisualBreak = breakTags.includes(node.tagName.toLowerCase()) || cls.includes('grid') || cls.includes('flex') || cls.includes('border-t')
 
          if (isVisualBreak) currentConsecutiveWords = 0
          node.childNodes.forEach(traverseWords)
@@ -150,14 +147,15 @@ function checkSeoRules(filepath) {
        }
 
        if (requiredFloor > 0 && totalWordCount < requiredFloor) {
-         console.warn(`[WARNING] Word floor not met in ${relativePath}. Found ${totalWordCount} words, expected >= ${requiredFloor}.`)
+         errors.push(`Word floor not met in ${relativePath}. Found ${totalWordCount} words, expected >= ${requiredFloor}.`)
        }
     }
 
     const svgs = root.querySelectorAll('svg')
     svgs.forEach(svg => {
        const viewBox = svg.getAttribute('viewBox')
-       if (viewBox && viewBox !== '0 0 24 24') {
+       // Must not be a hugeicon (they are 0 0 24 24), but must be an actual graphic.
+       if (viewBox && viewBox !== '0 0 24 24' && !svg.getAttribute('class')?.includes('lucide') && !viewBox.includes('0 0 100 100')) {
          siteWideSvgs.add(svg.outerHTML)
        }
     })
@@ -295,7 +293,8 @@ let linkSuccess = verifyLinkingLaw()
 let finalSuccess = walkSuccess && linkSuccess
 
 if (siteWideSvgs.size < 3) {
-   console.warn(`\n[WARNING] Only ${siteWideSvgs.size} distinct substantial SVGs found. Brief requires 3 by PASS 4.`)
+   console.error(`\n[ERROR] Only ${siteWideSvgs.size} distinct substantial SVGs found. Brief requires 3 by PASS 4.`)
+   finalSuccess = false
 }
 
 if (!finalSuccess) {

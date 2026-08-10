@@ -22,7 +22,8 @@ export const dataset: ContentDataset = {
         verificationDate: "{{VERIFY: Alpha Date 1}}",
       },
       status: "Baselining",
-      description: "{{VERIFY: Vendor A Description. Needs to be fairly long to avoid errors.}}",
+      description:
+        "{{VERIFY: Vendor A Description. Needs to be fairly long to avoid errors.}}",
     },
     {
       slug: "vendor-b",
@@ -44,7 +45,8 @@ export const dataset: ContentDataset = {
         verificationDate: "{{VERIFY: Alpha Date 2}}",
       },
       status: "Baselining",
-      description: "{{VERIFY: Vendor B Description. Needs to be fairly long to avoid errors.}}",
+      description:
+        "{{VERIFY: Vendor B Description. Needs to be fairly long to avoid errors.}}",
     },
     {
       slug: "vendor-c",
@@ -66,14 +68,16 @@ export const dataset: ContentDataset = {
         verificationDate: "{{VERIFY: Alpha Date 3}}",
       },
       status: "Baselining",
-      description: "{{VERIFY: Vendor C Description. Needs to be fairly long to avoid errors.}}",
-    }
+      description:
+        "{{VERIFY: Vendor C Description. Needs to be fairly long to avoid errors.}}",
+    },
   ],
   guides: [
     {
       slug: "evaluating-ai-claims",
       title: "How to Evaluate AI Trading Claims",
-      description: "A framework for dissecting marketing materials and identifying survivorship bias in algorithmic trading tools.",
+      description:
+        "A framework for dissecting marketing materials and identifying survivorship bias in algorithmic trading tools.",
       category: "Education",
       publishedAt: "2024-03-20",
       updatedAt: "2024-03-20",
@@ -81,7 +85,8 @@ export const dataset: ContentDataset = {
     {
       slug: "understanding-alpha",
       title: "Understanding Alpha vs Absolute Returns",
-      description: "Why absolute returns are misleading and how to properly compare a tool against a buy-and-hold S&P 500 strategy.",
+      description:
+        "Why absolute returns are misleading and how to properly compare a tool against a buy-and-hold S&P 500 strategy.",
       category: "Education",
       publishedAt: "2024-03-22",
       updatedAt: "2024-03-22",
@@ -89,26 +94,27 @@ export const dataset: ContentDataset = {
     {
       slug: "sec-enforcement-history",
       title: "History of AI-Washing SEC Actions",
-      description: "A detailed timeline of regulatory actions against firms making false claims about AI capabilities, starting with the March 2024 actions.",
+      description:
+        "A detailed timeline of regulatory actions against firms making false claims about AI capabilities, starting with the March 2024 actions.",
       category: "Regulation",
       publishedAt: "2024-03-25",
       updatedAt: "2024-03-25",
-    }
-  ]
+    },
+  ],
 }
 
 export function getVendors() {
-  return dataset.vendors;
+  return dataset.vendors
 }
 
 export function getVendorBySlug(slug: string) {
-  return dataset.vendors.find(v => v.slug === slug);
+  return dataset.vendors.find((v) => v.slug === slug)
 }
 
 export function getGuides() {
-  return dataset.guides;
+  return dataset.guides
 }
 
 export function getGuideBySlug(slug: string) {
-  return dataset.guides.find(g => g.slug === slug);
+  return dataset.guides.find((g) => g.slug === slug)
 }

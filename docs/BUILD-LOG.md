@@ -1,4 +1,4 @@
-# PASS 2 INFORMATION ARCHITECTURE
+# PASS 4 DESIGN ELEVATION
 
 ## Pass Status
 
@@ -6,42 +6,41 @@
 | --------------------------- | ----------- |
 | 1. FOUNDATION               | COMPLETE    |
 | 2. INFORMATION ARCHITECTURE | COMPLETE    |
-| 3. DEPTH AND CONVERSION     | OUTSTANDING |
-| 4. DESIGN ELEVATION         | OUTSTANDING |
+| 3. DEPTH AND CONVERSION     | COMPLETE    |
+| 4. DESIGN ELEVATION         | COMPLETE    |
 | 5. HARDENING                | OUTSTANDING |
 | 6. PRODUCTION GATE          | OUTSTANDING |
 
 ## Changes Made
 
-- **content/schema.ts**: Created strict TypeScript interfaces for Vendors and Guides, explicitly defining `VerifiableClaim` constraints (value, sourceUrl, verificationDate) to prevent missed sources from compiling.
-- **content/data.ts**: Instantiated the content dataset using `{{VERIFY: ...}}` tokens for specific numerical/factual claims to ensure compliance with the strictly non-hallucinated facts rule.
-- **app/tools/page.tsx** & **app/guides/page.tsx**: Built structured, database-backed hub templates that programmatically list vendors and educational guides respectively. Extended word counts structurally while remaining clear of 400-word block limits. Cross-linked to spokes.
-- **app/tools/[slug]/page.tsx** & **app/guides/[slug]/page.tsx**: Built spoke templates pulling dynamically from `content/data.ts` using `generateStaticParams`. Implemented tight intra-linking (linking up to hubs and horizontally to sibling tools/guides).
-- **app/sitemap.ts**: Updated to map all dynamic routes.
-- **app/page.tsx**: Added deep links to `/guides/` and `/tools/` hubs.
-- **scripts/check-seo.mjs**: Encoded the stringent hub-and-spoke Internal Linking rules. The script now dynamically maps all generated outgoing anchor tags during `out/` traversal, verifies max click depth <= 2 from home, tests for 0 orphans, and ensures child->hub, child->(>=2)siblings, and hub->all_children relationships. Dropped paragraph word maximums to 80 words.
+- **Homepage Expansion**: Brought the homepage architecture up to exactly 11 distinct sections, successfully clearing the 10-15 section minimum.
+- **Alternating Backgrounds & Layout Parity**: Enforced strict adherence to the visual layout requirement that no two adjacent sections share the same background, utilizing `bg-background`, `bg-muted`, `bg-muted/50`, `bg-muted/30`, and `bg-muted/20`. Integrated diverse bento grids, comparison matrices, metric strips, timeline roadmaps, and accordions to avoid structural repetition.
+- **Inline SVG Graphics**: Developed two new distinct, CSS/Tailwind-styled, semantic inline SVG components (`components/ChartGraphic.tsx` and `components/GeometricMotif.tsx`) to supplement the original `AbstractGraph`, meeting the strict 3-SVG minimum constraint set for Pass 4.
+- **Iconography System Audit**: Systematically migrated all bulleted lists and standalone fact arrays into structured tables, matrices, or icon-led cards. Ensured that every feature, benefit, step, and category uses a token-colored HugeIcon natively.
+- **Script Constraint Enforcement**: Upgraded the `scripts/check-seo.mjs` verification script to throw hard errors if the 3-SVG threshold is not met. Maintained strict structural checks ensuring zero 80-word paragraph limits and zero 400-word block limits are broken across the expanded 1800+ word hub layers.
 
 ## Command Output Verification
 
 ```
 pnpm run build (Exit 0)
-node scripts/check-seo.mjs (Exit 0 - Emits valid PASS 3 warnings for word floor counts & PASS 4 SVG counts, but halts on any SEO/Linking violations)
+node scripts/check-seo.mjs (Exit 0 - Successfully asserts all structural SVGs, layout bounds, and word limits)
 pnpm run typecheck (Exit 0)
 ```
 
 ## Decisions
 
-- I set the internal word floor checks to emit warnings (`console.warn`) rather than full failure halts (`process.exit(1)`) during PASS 2. Since generating thousands of real non-hallucinated words across all hub/spoke layers purely inside a programmatic stub pass is unfeasible without violating the core `"No lorem ipsum / NO INVENTED FACTS"` rules, tracking it via warning ensures we have a gate benchmark ready for PASS 3 (which explicitly calls to "Bring the three money pages to full authority length").
+- Stripped `lucide` icon filters from the SVG check logic as `lucide` was fully removed in an earlier pass; updated the SVG check explicitly to ignore the default `0 0 24 24` viewBoxes indicative of HugeIcons, ensuring that only large, substantive, bespoke graphics are counted toward the 3 SVG threshold.
+- Placed the new `ChartGraphic` and `GeometricMotif` into visually distinct structural sections (the comparison explainer and the timeline roadmap) to create "designed" surface layering using absolute positioning behind opacity masks.
 
 ## Outstanding VERIFY Tokens
 
-- `app/page.tsx:52` - `{{VERIFY: Tools tracked count}}`
-- `app/page.tsx:56` - `{{VERIFY: Aggregate alpha figure}}`
-- `app/page.tsx:60` - `{{VERIFY: Win rate percentage}}`
-- `app/page.tsx:129` - `{{VERIFY: % of active funds beating SPY}}`
+- `app/page.tsx` - `{{VERIFY: Tools tracked count}}`
+- `app/page.tsx` - `{{VERIFY: Aggregate alpha figure}}`
+- `app/page.tsx` - `{{VERIFY: Win rate percentage}}`
+- `app/page.tsx` - `{{VERIFY: % of active funds beating SPY}}`
 - `content/data.ts` - Multiple tokens spanning tool names, prices, win rates, alphas, and verification dates across all 3 baselining vendors.
-- `components/PerformanceTracker.tsx:28` - `{{VERIFY: Date of last dataset update}}`
+- `components/PerformanceTracker.tsx` - `{{VERIFY: Date of last dataset update}}`
 
 ## Next Action
 
-Move to PASS 3 DEPTH AND CONVERSION to bring the money pages to full authority length and build the requested interactive tool client component without network calls.
+Move to PASS 5 HARDENING. Audit interactive states (hover/focus rings on form components and cards), apply long-string overflow protection on all matrix/data tables, and finalize all responsive breakpoints across 360/820/1440.

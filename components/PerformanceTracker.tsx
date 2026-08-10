@@ -1,3 +1,6 @@
+"use client"
+
+import { useState } from "react"
 import {
   Card,
   CardContent,
@@ -8,8 +11,11 @@ import {
 import { Badge } from "@/components/ui/badge"
 import { HugeiconsIcon } from "@hugeicons/react"
 import { Alert01Icon } from "@hugeicons/core-free-icons"
+import { cn } from "@/lib/utils"
 
 export function PerformanceTracker() {
+  const [timeframe, setTimeframe] = useState<"1M" | "3M" | "6M" | "1Y">("3M")
+
   return (
     <Card className="w-full border-border bg-background shadow-sm">
       <CardHeader className="border-b bg-muted/30 pb-6">
@@ -22,16 +28,44 @@ export function PerformanceTracker() {
               Independent verification of AI stock-picker returns vs. S&P 500
             </CardDescription>
           </div>
-          <Badge
-            variant="outline"
-            className="w-fit font-mono text-xs font-normal"
-          >
-            LAST UPDATED: {"{{VERIFY: Date of last dataset update}}"}
-          </Badge>
+          <div className="flex items-center gap-4">
+            {/* Interactive timeframe selector - keyboard accessible via raw buttons */}
+            <div
+              className="flex rounded-md bg-muted p-1"
+              role="tablist"
+              aria-label="Tracking Timeframe"
+            >
+              {(["1M", "3M", "6M", "1Y"] as const).map((tf) => (
+                <button
+                  key={tf}
+                  role="tab"
+                  aria-selected={timeframe === tf}
+                  onClick={() => setTimeframe(tf)}
+                  className={cn(
+                    "rounded-sm px-3 py-1 font-mono text-xs transition-colors",
+                    timeframe === tf
+                      ? "bg-background text-foreground shadow-sm"
+                      : "text-muted-foreground hover:text-foreground"
+                  )}
+                >
+                  {tf}
+                </button>
+              ))}
+            </div>
+            <Badge
+              variant="outline"
+              className="w-fit font-mono text-xs font-normal"
+            >
+              LAST UPDATED: {"{{VERIFY: Date of last dataset update}}"}
+            </Badge>
+          </div>
         </div>
       </CardHeader>
       <CardContent className="p-0">
-        <div className="flex flex-col items-center justify-center px-6 py-24 text-center">
+        <div
+          className="flex flex-col items-center justify-center px-6 py-24 text-center"
+          aria-live="polite"
+        >
           <div className="mb-6 rounded-full bg-muted p-4">
             <HugeiconsIcon
               icon={Alert01Icon}
@@ -39,7 +73,7 @@ export function PerformanceTracker() {
             />
           </div>
           <h3 className="mb-3 font-heading text-xl font-semibold">
-            Dataset Initialising
+            Dataset Initialising ({timeframe} View)
           </h3>
           <p className="mb-8 max-w-md text-[15px] leading-relaxed text-muted-foreground">
             Tracking will commence once the first verified performance data is
