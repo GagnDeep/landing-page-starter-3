@@ -1,30 +1,76 @@
-import { Geist, Geist_Mono, Figtree } from "next/font/google"
+import type { Metadata } from 'next';
+import { Instrument_Serif, Public_Sans, Space_Mono } from 'next/font/google';
+import './globals.css';
+import { siteConfig } from '../lib/site';
 
-import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
-import { cn } from "@/lib/utils";
+const fontHeading = Instrument_Serif({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-heading',
+  display: 'swap',
+});
 
-const figtree = Figtree({subsets:['latin'],variable:'--font-sans'})
+const fontSans = Public_Sans({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  display: 'swap',
+});
 
-const fontMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-})
+const fontMono = Space_Mono({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-mono',
+  display: 'swap',
+});
+
+export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  alternates: {
+    canonical: './',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: siteConfig.url,
+    title: siteConfig.name,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteConfig.name,
+    description: siteConfig.description,
+  },
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", figtree.variable)}
-    >
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
+    <html lang="en" className={`${fontHeading.variable} ${fontSans.variable} ${fontMono.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: siteConfig.name,
+              url: siteConfig.url,
+            }),
+          }}
+        />
+      </head>
+      <body className="antialiased font-sans bg-background text-foreground">
+        {children}
       </body>
     </html>
-  )
+  );
 }
