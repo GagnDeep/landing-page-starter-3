@@ -1,19 +1,40 @@
-import { Button } from "@/components/ui/button"
+import { buildMetadata } from "@/lib/metadata"
+import { getOrganizationSchema, getWebSiteSchema } from "@/lib/json-ld"
+import { Hero } from "@/components/sections/home/Hero"
+import { ValueProp } from "@/components/sections/home/ValueProp"
+import { BentoGrid } from "@/components/sections/home/BentoGrid"
+import { ComparisonMatrix } from "@/components/sections/home/ComparisonMatrix"
+import { StatStrip } from "@/components/sections/home/StatStrip"
+import { NumberedProcess } from "@/components/sections/home/NumberedProcess"
+import { QuoteBand } from "@/components/sections/home/QuoteBand"
+import { FAQAccordion } from "@/components/sections/home/FAQAccordion"
+import { LatestIssues } from "@/components/sections/home/LatestIssues"
+import { ConversionBand } from "@/components/sections/home/ConversionBand"
 
-export default function Page() {
+export const metadata = buildMetadata({
+  path: "/",
+})
+
+export default function Home() {
+  const jsonLd = [getOrganizationSchema(), getWebSiteSchema()]
+
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
-    </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      {/* Total: 10 Sections */}
+      <Hero /> {/* bg-background */}
+      <ValueProp /> {/* bg-muted */}
+      <BentoGrid /> {/* bg-background */}
+      <StatStrip /> {/* bg-primary */}
+      <ComparisonMatrix /> {/* bg-muted */}
+      <NumberedProcess /> {/* bg-background */}
+      <QuoteBand /> {/* bg-primary */}
+      <FAQAccordion /> {/* bg-muted */}
+      <LatestIssues /> {/* bg-background */}
+      <ConversionBand /> {/* bg-muted */}
+    </>
   )
 }
