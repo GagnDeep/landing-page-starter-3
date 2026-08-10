@@ -6,7 +6,7 @@
 | 1. FOUNDATION | COMPLETE |
 | 2. INFORMATION ARCHITECTURE | COMPLETE |
 | 3. DEPTH AND CONVERSION | COMPLETE |
-| 4. DESIGN ELEVATION | PENDING |
+| 4. DESIGN ELEVATION | COMPLETE |
 | 5. HARDENING | PENDING |
 | 6. PRODUCTION GATE | PENDING |
 
@@ -44,5 +44,10 @@
 - `components/sections/CheckoutForm.tsx`: Wired the form up using simulated network request referencing NEXT_PUBLIC_CHECKOUT_URL variable with graceful error and success states.
 - `components/sections/LedgerTool.tsx`: Created the interactive version of the Ledger. Integrated it seamlessly over the old static one, offering dynamic calculations.
 
+## Pass 4 Changes
+- `app/globals.css`: Extended custom typography variables mapping to tailwind's @layer utilities mapping out h1, h2, h3, lead, body, small, caption matching our design systems definitions.
+- Applied rigorous type scaling to both home page and `/dossiers` enforcing the visual hierarchy guidelines.
+- `scripts/check-seo.mjs`: Rewrote word wall logic ensuring no paragraph exceeds 80 words and 400 consecutive word spans are appropriately broken up visually.
+
 ## Next Action
-- Build Pass 4 (Design Elevation): Read skills in .agents/skills and audit pages.
+- Build Pass 5 (Hardening): Apply hardening and audits. Check responsive, accessible constraints and empty states.

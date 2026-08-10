@@ -26,11 +26,11 @@ export default function Dossiers() {
         <section className="py-16 md:py-24 bg-background border-b border-border">
           <div className="container mx-auto px-4 lg:px-8 grid md:grid-cols-2 gap-12 items-start">
             <div>
-              <span className="text-sm font-bold tracking-wider text-primary uppercase">The Dossiers</span>
-              <h1 className="text-4xl md:text-5xl font-heading leading-tight mt-2 mb-6">
+              <span className="text-caption">The Dossiers</span>
+              <h1 className="text-h1 mt-2 mb-6">
                 Verified Data Packets. No Agent Bias.
               </h1>
-              <p className="text-xl text-muted-foreground mb-8 text-balance">
+              <p className="text-lead mb-8 text-balance">
                 The relocation industry is incentivized to sell you a move. We are incentivized to provide you with the most accurate, dated, and sourced information available. Our premium dossiers are exhaustive teardowns of the visa, healthcare, and tax systems of our covered countries.
               </p>
 
@@ -177,7 +177,7 @@ export default function Dossiers() {
                 Our commitment is to transparency. If we do not know the answer to a specific question, or if the official sources are ambiguous, we state that clearly. We believe that acknowledging uncertainty is far more valuable than providing a false sense of security. The dossiers are designed for the analytical, independent planner who demands data, not sales pitches.
               </p>
 
-              <h3 className="font-heading text-2xl mt-12 mb-4">6. Property and Real Estate Pitfalls</h3>
+              <h3 className="text-h3 mt-12 mb-4">6. Property and Real Estate Pitfalls</h3>
               <p>
                 Many retirees choose to purchase property, either as a primary residence or to qualify for a &quot;Golden Visa&quot; type program. The dossiers include a dedicated section on the legal and structural realities of the local real estate market, stripping away the marketing language used by local agents.
               </p>
@@ -187,7 +187,7 @@ export default function Dossiers() {
                 <li><strong>Legal Protections:</strong> An assessment of the escrow process, title insurance availability, and the standard level of due diligence required to avoid purchasing property with undeclared debts or structural illegalities.</li>
               </ul>
 
-              <h3 className="font-heading text-2xl mt-12 mb-4">7. Banking and Financial Mechanics</h3>
+              <h3 className="text-h3 mt-12 mb-4">7. Banking and Financial Mechanics</h3>
               <p>
                 Establishing local banking is often a prerequisite for a residency application, yet it remains one of the most consistently frustrating hurdles for new arrivals. We detail the mechanical reality of moving and managing your money across borders.
               </p>

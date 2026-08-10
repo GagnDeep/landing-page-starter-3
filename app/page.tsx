@@ -27,11 +27,11 @@ export default function Home() {
         <section className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <span className="text-sm font-bold tracking-wider text-primary uppercase">The Disclosed-Methodology Comparison</span>
-              <h1 className="text-4xl md:text-5xl font-heading leading-tight text-balance">
+              <span className="text-caption">The Disclosed-Methodology Comparison</span>
+              <h1 className="text-h1 text-balance">
                 Data-driven country comparisons for your retirement.
               </h1>
-              <p className="text-lg text-muted-foreground text-balance max-w-xl">
+              <p className="text-lead text-balance">
                 We compare countries by visa route, healthcare, monthly cost, and tax treatment. No unverified claims. Every figure is sourced and dated.
               </p>
             </div>
@@ -45,9 +45,9 @@ export default function Home() {
         <section className="py-16 md:py-24 bg-muted">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="mb-12">
-              <span className="text-sm font-bold tracking-wider text-primary uppercase">Interactive Tool</span>
-              <h2 className="text-3xl font-heading mt-2">The Ledger</h2>
-              <p className="text-muted-foreground max-w-2xl mt-4">
+              <span className="text-caption">Interactive Tool</span>
+              <h2 className="text-h2 mt-2">The Ledger</h2>
+              <p className="text-lead mt-4">
                 Compare baseline visa routes and healthcare paths across popular destinations. All gaps indicate unconfirmed data, not estimates.
               </p>
             </div>
@@ -59,8 +59,8 @@ export default function Home() {
         <section className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="mb-12 text-center">
-              <span className="text-sm font-bold tracking-wider text-primary uppercase">Methodology</span>
-              <h2 className="text-3xl font-heading mt-2">How we gather our data</h2>
+              <span className="text-caption">Methodology</span>
+              <h2 className="text-h2 mt-2">How we gather our data</h2>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-card border border-border p-8 rounded-xl shadow-sm text-center">
@@ -92,9 +92,9 @@ export default function Home() {
         <section className="py-16 md:py-24 bg-primary/5">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="mb-12 max-w-3xl">
-              <span className="text-sm font-bold tracking-wider text-primary uppercase">The Process</span>
-              <h2 className="text-3xl font-heading mt-2">Three Steps to Clarity</h2>
-              <p className="text-muted-foreground mt-4">Understanding your options requires a systematic approach to immigration, healthcare, and tax liability.</p>
+              <span className="text-caption">The Process</span>
+              <h2 className="text-h2 mt-2">Three Steps to Clarity</h2>
+              <p className="text-lead mt-4">Understanding your options requires a systematic approach to immigration, healthcare, and tax liability.</p>
             </div>
             <div className="my-12">
                <ProcessDiagram />
@@ -107,9 +107,9 @@ export default function Home() {
           <div className="container mx-auto px-4 lg:px-8">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
               <div className="max-w-2xl">
-                <span className="text-sm font-bold tracking-wider text-primary uppercase">Deep Dives</span>
-                <h2 className="text-3xl font-heading mt-2">Key Assessment Areas</h2>
-                <p className="text-muted-foreground mt-4">Detailed breakdowns of the most critical factors for a successful relocation.</p>
+                <span className="text-caption">Deep Dives</span>
+                <h2 className="text-h2 mt-2">Key Assessment Areas</h2>
+                <p className="text-lead mt-4">Detailed breakdowns of the most critical factors for a successful relocation.</p>
               </div>
             </div>
 
@@ -125,8 +125,8 @@ export default function Home() {
                     <HugeiconsIcon icon={item.icon} className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="font-heading font-semibold mb-1">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground">{item.desc}</p>
+                    <h3 className="text-h3 mb-1">{item.title}</h3>
+                    <p className="text-small text-muted-foreground">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -142,23 +142,23 @@ export default function Home() {
                  <HugeiconsIcon icon={CheckmarkCircle01Icon} className="w-8 h-8" />
                  <span className="font-mono text-sm font-bold">COMPLIANCE</span>
               </div>
-              <h3 className="font-heading text-2xl">Strictly Information, Never Advice</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-h3">Strictly Information, Never Advice</h3>
+              <p className="text-body text-muted-foreground">
                 This platform is an independent aggregation of government data. We provide no financial, tax, immigration, or medical advice. Our commitment is to transparency and methodological rigor.
               </p>
             </div>
             <div className="space-y-6">
-              <span className="text-sm font-bold tracking-wider text-primary uppercase">Our Stance</span>
-              <h2 className="text-3xl font-heading mt-2">Why we built this</h2>
-              <p className="text-muted-foreground text-balance">
+              <span className="text-caption">Our Stance</span>
+              <h2 className="text-h2 mt-2">Why we built this</h2>
+              <p className="text-lead text-balance">
                 The relocation industry is filled with agents paid when you move. They rarely date their figures. We built this because the admission of unverified data is a feature, not a bug.
               </p>
               <ul className="space-y-3 mt-6">
-                <li className="flex items-center gap-3 text-sm">
+                <li className="flex items-center gap-3 text-body">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
                   <span>Independent and self-funded</span>
                 </li>
-                <li className="flex items-center gap-3 text-sm">
+                <li className="flex items-center gap-3 text-body">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
                   <span>No commission-driven recommendations</span>
                 </li>

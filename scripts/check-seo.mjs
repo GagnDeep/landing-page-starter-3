@@ -109,9 +109,22 @@ function checkHtmlFile(fullPath) {
   if (pMatches) {
     for (const p of pMatches) {
       const words = p.replace(/<[^>]+>/g, '').split(/\s+/).length;
-      if (words > 120) {
-        reportError(fullPath, `Paragraph exceeds 120 words (${words} words).`);
+      if (words > 80) {
+        reportError(fullPath, `Paragraph exceeds 80 words (${words} words).`);
       }
+    }
+    const bodyMatch = content.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
+    const bodyContent = bodyMatch ? bodyMatch[1] : content;
+    const noScripts = bodyContent.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
+    const textBlocks = noScripts.split(/<svg|<ul|<ol|<table|<img|<h[1-6]|<section|<div[^>]*class="[^"]*grid[^"]*"[^>]*>/gi);
+    for (const block of textBlocks) {
+       const innerText = block.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+       if (innerText.length > 0) {
+         const words = innerText.split(' ').length;
+         if (words > 400) {
+            reportError(fullPath, `Block of text exceeds 400 consecutive words without a visual break (${words} words).`);
+         }
+       }
     }
   }
 
