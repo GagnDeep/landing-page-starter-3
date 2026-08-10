@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  output: "export",
+  distDir: process.env.NODE_ENV === "development" ? ".next" : "out",
+  trailingSlash: true,
+}
 
 export default nextConfig
