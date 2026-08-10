@@ -1,0 +1,7 @@
+{
+  "path": "out",
+  "recurse": true,
+  "skip": [
+    "^https://instituteofretirement.com"
+  ]
+}

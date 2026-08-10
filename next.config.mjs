@@ -1,4 +1,10 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const isDev = process.env.NODE_ENV === 'development';
 
-export default nextConfig
+const nextConfig = {
+  output: 'export',
+  trailingSlash: true,
+  distDir: isDev ? '.next' : 'out',
+};
+
+export default nextConfig;
